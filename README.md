@@ -1,11 +1,10 @@
-# Joyce & Ken Wedding VIP Invitation
+# Joyce & Ken Wedding Invitation — Storybook Rebuild v2
 
-This version was rebuilt cleanly from scratch to avoid CSS conflicts and overlapping rules.
+This is a fresh rebuild, not a CSS override.
 
-## Files
-- index.html
-- style.css
-- script.js
-- images/
-
-Upload these files directly to the root of your GitHub Pages repository.
+Changes in v2:
+- Reworked text hierarchy to prevent overlap and improve readability.
+- Removed repeated J & K monograms.
+- Moved Joyce & Ken away from the subtitle/hero hierarchy.
+- Replaced sharp flower icons and geometric floral decorations with soft rounded petal clusters.
+- Simplified the envelope front so the composition has more breathing room.

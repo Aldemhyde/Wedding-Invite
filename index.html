@@ -10,138 +10,153 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main>
 
-  <!-- INTRO -->
-  <main>
-    <section class="hero">
-      <div class="hero-flower flower-a">✿</div>
-      <div class="hero-flower flower-b">❀</div>
-      <div class="hero-flower flower-c">✦</div>
+  <!-- COVER -->
+  <section class="hero">
+    <div class="watercolor wc-blue"></div>
+    <div class="watercolor wc-pink"></div>
+    <div class="watercolor wc-peach"></div>
 
-      <div class="hero-copy">
-        <p class="kicker">JOYCE & KEN · MAY 11, 2027</p>
-        <h1>A little piece of<br><em>springtime magic.</em></h1>
-        <p class="intro-text">
-          We have prepared something special for someone very dear to our hearts.
-        </p>
-      </div>
+    <div class="hero-copy">
+      <p class="kicker">A SPECIAL INVITATION</p>
+      <h1>A little piece of<br><em>springtime magic.</em></h1>
+      <p class="intro-text">We have prepared something special for someone very dear to our hearts.</p>
+    </div>
 
-      <div class="invitation-area">
-        <button class="invitation-button" id="invitationButton" aria-expanded="false">
-          <span class="paper-shadow"></span>
+    <div class="invitation-area">
+      <button class="invitation-button" id="invitationButton" aria-expanded="false" aria-label="Open invitation">
+        <span class="paper-shadow"></span>
 
-          <article class="invitation-paper">
-            <span class="paper-flower pf-one">✿</span>
-            <span class="paper-flower pf-two">❀</span>
-            <p>A SPECIAL INVITATION FROM</p>
-            <h2>Joyce <span>&</span> Ken</h2>
-            <div class="paper-divider">✦</div>
-            <small>FOR SOMEONE VERY DEAR TO OUR HEARTS</small>
-          </article>
-
-          <div class="envelope-pocket">
-            <div class="pocket-label">
-              <span>WITH LOVE</span>
-              <strong>J <i>&</i> K</strong>
-            </div>
-            <div class="seal">J<span>&</span>K</div>
+        <article class="invitation-paper">
+          <div class="paper-bouquet bouquet-top-left">
+            <i class="bloom blush"></i><i class="bloom blue"></i><i class="bloom peach"></i><i class="leaf"></i>
           </div>
-        </button>
-
-        <p class="tap-text" id="tapText">Tap the invitation to open</p>
-      </div>
-    </section>
-
-    <!-- INVITATION -->
-    <section class="page invitation-page">
-      <div class="page-content">
-        <p class="kicker">A SPECIAL INVITATION FROM</p>
-        <h2 class="display-name">Joyce <span>&</span> Ken</h2>
-        <div class="divider">✦</div>
-        <p class="body-copy">
-          With joyful hearts, we invite you to celebrate with us as we begin our
-          beautiful journey as husband and wife.
-        </p>
-        <p class="date">MAY 11, 2027</p>
-      </div>
-    </section>
-
-    <!-- VIP DEDICATION -->
-    <section class="page dedication-page">
-      <div class="dedication-card">
-        <span class="corner-flower top-left">✿</span>
-        <span class="corner-flower top-right">❀</span>
-        <span class="corner-flower bottom-left">❀</span>
-        <span class="corner-flower bottom-right">✿</span>
-
-        <p class="kicker">TO SOMEONE VERY DEAR TO US</p>
-        <h2>A special place<br>in our <em>forever.</em></h2>
-        <div class="divider">✦</div>
-
-        <p>
-          As we prepare to begin our life together, we are reminded of the people
-          whose love, guidance, and presence have made our journey even more meaningful.
-        </p>
-        <p>
-          It would be a great honor and blessing for us if you would stand with us
-          as one of our beloved <strong>Ninong / Ninang</strong> and guide us as we
-          begin this new chapter of our lives.
-        </p>
-
-        <p class="question">Will you do us the honor?</p>
-        <p class="signature">WITH LOVE, JOYCE & KEN</p>
-      </div>
-    </section>
-
-    <!-- WEDDING DETAILS -->
-    <section class="page details-page">
-      <div class="details-content">
-        <div class="details-text">
-          <p class="kicker">SAVE THE DATE</p>
-          <h2>Our Wedding Day</h2>
-
-          <div class="event">
-            <span class="event-label">CEREMONY</span>
-            <h3>Parish of Immaculate Heart of Mary</h3>
-            <p>May 11, 2027 · 2:00 PM</p>
+          <div class="paper-bouquet bouquet-bottom-right">
+            <i class="bloom blue"></i><i class="bloom blush"></i><i class="bloom peach"></i><i class="leaf"></i>
           </div>
 
-          <div class="event">
-            <span class="event-label">RECEPTION</span>
-            <h3>The Chandelier Events Place</h3>
-            <p>3:30 PM</p>
+          <p class="paper-overline">JOYCE &amp; KEN</p>
+          <h2>You are invited</h2>
+          <div class="paper-divider"><span></span><b>✦</b><span></span></div>
+          <small>A SPECIAL CELEBRATION OF LOVE</small>
+        </article>
+
+        <div class="envelope-pocket">
+          <div class="pocket-label">
+            <span>WITH LOVE</span>
+            <strong>Joyce &amp; Ken</strong>
           </div>
+          <div class="seal">✦</div>
+        </div>
+      </button>
+
+      <p class="tap-text" id="tapText">Tap the invitation to open</p>
+    </div>
+  </section>
+
+  <!-- OPENING PAGE -->
+  <section class="page invitation-page">
+    <div class="page-bouquet page-bouquet-one">
+      <i class="bloom blush"></i><i class="bloom blue"></i><i class="bloom peach"></i><i class="leaf"></i>
+    </div>
+    <div class="page-bouquet page-bouquet-two">
+      <i class="bloom blue"></i><i class="bloom blush"></i><i class="leaf"></i>
+    </div>
+
+    <div class="page-content">
+      <p class="kicker">JOYCE &amp; KEN REQUEST THE PLEASURE OF YOUR COMPANY</p>
+      <h2 class="display-name">As we begin our <em>forever.</em></h2>
+      <div class="divider">✦</div>
+      <p class="body-copy">
+        With joyful hearts, we invite you to celebrate with us as we begin our
+        beautiful journey as husband and wife.
+      </p>
+      <p class="date">MAY 11, 2027</p>
+    </div>
+  </section>
+
+  <!-- VIP DEDICATION -->
+  <section class="page dedication-page">
+    <div class="dedication-card">
+      <div class="soft-corner corner-one">
+        <i class="bloom blush"></i><i class="bloom blue"></i><i class="leaf"></i>
+      </div>
+      <div class="soft-corner corner-two">
+        <i class="bloom peach"></i><i class="bloom blush"></i><i class="leaf"></i>
+      </div>
+
+      <p class="kicker">TO SOMEONE VERY DEAR TO US</p>
+      <h2>A special place<br>in our <em>forever.</em></h2>
+      <div class="divider">✦</div>
+
+      <p>
+        As we prepare to begin our life together, we are reminded of the people
+        whose love, guidance, and presence have made our journey even more meaningful.
+      </p>
+      <p>
+        It would be a great honor and blessing for us if you would stand with us
+        as one of our beloved <strong>Ninong / Ninang</strong> and guide us as we
+        begin this new chapter of our lives.
+      </p>
+
+      <p class="question">Will you do us the honor?</p>
+      <p class="signature">WITH LOVE, JOYCE &amp; KEN</p>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="page details-page">
+    <div class="details-content">
+      <div class="details-text">
+        <p class="kicker">SAVE THE DATE</p>
+        <h2>Our Wedding Day</h2>
+
+        <div class="event">
+          <span class="event-label">CEREMONY</span>
+          <h3>Parish of Immaculate Heart of Mary</h3>
+          <p>May 11, 2027 · 2:00 PM</p>
         </div>
 
-        <figure class="ring-photo">
-          <img src="images/ring.jpg" alt="Joyce and Ken's wedding ring">
-        </figure>
+        <div class="event">
+          <span class="event-label">RECEPTION</span>
+          <h3>The Chandelier Events Place</h3>
+          <p>3:30 PM</p>
+        </div>
       </div>
-    </section>
 
-    <!-- COUPLE -->
-    <section class="page couple-page">
-      <figure class="couple-photo">
-        <img src="images/couple.jpg" alt="Joyce and Ken">
+      <figure class="ring-photo">
+        <img src="images/ring.jpg" alt="Joyce and Ken's wedding rings">
       </figure>
-      <div class="couple-copy">
-        <p class="kicker">OUR NEXT CHAPTER</p>
-        <h2>And so, our<br><em>forever begins.</em></h2>
-        <p>We would be honored to have you beside us on this beautiful day.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- END -->
-    <section class="final-page">
-      <span class="final-flower ff1">✿</span>
-      <span class="final-flower ff2">❀</span>
-      <span class="final-flower ff3">✦</span>
-      <p class="kicker">WITH LOVE</p>
-      <h2>Joyce <span>&</span> Ken</h2>
-      <p class="final-date">MAY 11, 2027</p>
-    </section>
-  </main>
+  <!-- COUPLE -->
+  <section class="page couple-page">
+    <figure class="couple-photo">
+      <img src="images/couple.jpg" alt="Joyce and Ken">
+    </figure>
+    <div class="couple-copy">
+      <p class="kicker">OUR NEXT CHAPTER</p>
+      <h2>And so, our<br><em>forever begins.</em></h2>
+      <p>We would be honored to have you beside us on this beautiful day.</p>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- END -->
+  <section class="final-page">
+    <div class="final-bouquet final-left">
+      <i class="bloom blue"></i><i class="bloom blush"></i><i class="bloom peach"></i><i class="leaf"></i>
+    </div>
+    <div class="final-bouquet final-right">
+      <i class="bloom blush"></i><i class="bloom blue"></i><i class="leaf"></i>
+    </div>
+    <p class="kicker">WITH LOVE</p>
+    <h2>Joyce <span>&amp;</span> Ken</h2>
+    <p class="final-date">MAY 11, 2027</p>
+  </section>
+
+</main>
+<script src="script.js"></script>
 </body>
 </html>
