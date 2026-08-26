@@ -1,156 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#b9d1ee">
-  <meta name="description" content="Joyce & Ken — Wedding Invitation, May 11, 2027">
-  <title>Joyce & Ken | Our Wedding Story</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#c7d9ed">
+<title>Joyce & Ken — May 11, 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient-flower flower-a">✿</div>
-  <div class="ambient-flower flower-b">✽</div>
-  <div class="fairy-lights" aria-hidden="true">
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-  </div>
-  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+<div class="stars" id="stars"></div>
 
-  <div class="intro-screen" id="intro">
-    <div class="intro-flower">✿</div>
-    <p class="tiny">A LITTLE WEDDING STORY</p>
+<section class="welcome" id="welcome">
+  <div class="welcome-card">
+    <div class="little-flower">✿</div>
+    <p>AN INVITATION FROM</p>
     <h1>Joyce <span>&amp;</span> Ken</h1>
-    <p class="intro-date">MAY 11, 2027</p>
-    <button id="openBook" class="gold-btn">Open Our Invitation <span>♡</span></button>
+    <div class="date">MAY 11, 2027</div>
+    <button id="open">Open our invitation <b>♡</b></button>
+  </div>
+</section>
+
+<main class="experience" id="experience">
+  <div class="book" id="book">
+    <div class="book-pages">
+      <div class="page-under">
+        <p class="tiny">A LITTLE NOTE</p>
+        <h2>Our story<br><i>continues here.</i></h2>
+        <p>We would love for you to be part of the day we begin our next chapter together.</p>
+        <div class="signature">Joyce &amp; Ken</div>
+      </div>
+    </div>
+
+    <div class="cover" id="cover">
+      <div class="cover-front">
+        <div class="cover-border">
+          <span class="cover-flower">❀</span>
+          <p>OUR WEDDING</p>
+          <h2>Joyce <i>&amp;</i> Ken</h2>
+          <div class="monogram">J <span>♡</span> K</div>
+          <small>11 · 05 · 2027</small>
+          <span class="cover-flower bottom">✿</span>
+        </div>
+      </div>
+      <div class="cover-back"></div>
+    </div>
+
+    <div class="diorama" id="diorama">
+      <div class="backdrop">
+        <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+        <div class="sun">☼</div>
+        <div class="arch">
+          <div class="arch-window"></div>
+          <div class="arch-door"></div>
+          <span class="cross">✝</span>
+        </div>
+        <div class="back-flower bf1">✿</div>
+        <div class="back-flower bf2">❀</div>
+        <div class="back-flower bf3">✽</div>
+      </div>
+
+      <div class="pop-layer lights">
+        <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
+      </div>
+
+      <div class="pop-layer side-flower left">
+        <span>❀</span><span>✿</span><span>❁</span>
+      </div>
+      <div class="pop-layer side-flower right">
+        <span>✽</span><span>❀</span><span>✿</span>
+      </div>
+
+      <div class="couple">
+        <div class="person bride">
+          <div class="head"></div>
+          <div class="hair"></div>
+          <div class="body"></div>
+          <div class="dress"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="person groom">
+          <div class="head"></div>
+          <div class="hair"></div>
+          <div class="body"></div>
+          <div class="legs"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="heart">♡</div>
+      </div>
+
+      <div class="foreground">
+        <div class="flower-bed">
+          <span>❀</span><span>✿</span><span>❁</span><span>✽</span><span>❀</span>
+        </div>
+        <div class="message">
+          <p class="tiny">PLEASE SAVE OUR DATE</p>
+          <h1>Joyce <i>&amp;</i> Ken</h1>
+          <div class="date-big">MAY 11, 2027</div>
+          <p class="hint">Our wedding day</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-turn" id="pageTurn">
+      <div class="inside-page">
+        <p class="tiny">THE DAY</p>
+        <h2>When we say<br><i>“I do”</i></h2>
+        <div class="event">
+          <span>✝</span>
+          <div><small>CEREMONY · 2:00 PM</small><strong>Parish of Immaculate Heart of Mary</strong></div>
+        </div>
+        <div class="event">
+          <span>✦</span>
+          <div><small>RECEPTION · 3:30 PM</small><strong>The Chandelier Events Place</strong></div>
+        </div>
+        <p class="formal">Formal invitation to follow.</p>
+      </div>
+    </div>
   </div>
 
-  <main class="scene" id="scene" aria-label="Interactive wedding invitation">
-    <div class="book">
-      <div class="book-shadow"></div>
-
-      <!-- Cover -->
-      <section class="page cover-page" data-page="0">
-        <div class="flower-cluster cluster-cover-left" aria-hidden="true">
-          <span>✿</span><span>❀</span><span>✽</span><span>❁</span>
-        </div>
-        <div class="flower-cluster cluster-cover-right" aria-hidden="true">
-          <span>❁</span><span>✽</span><span>❀</span><span>✿</span>
-        </div>
-        <div class="cover-inner">
-          <div class="cover-border">
-            <div class="botanical top-left">❀</div>
-            <div class="botanical top-right">✿</div>
-            <p class="tiny">THE BEGINNING OF</p>
-            <h2>Our Wedding<br><span>Story</span></h2>
-            <div class="monogram">J <i>&amp;</i> K</div>
-            <p class="cover-date">11 · 05 · 2027</p>
-            <div class="botanical bottom-left">✽</div>
-            <div class="botanical bottom-right">❁</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Page 1 -->
-      <section class="page page-one" data-page="1">
-        <div class="paper">
-          <p class="tiny">CHAPTER ONE</p>
-          <h2>And so,<br><span>a new chapter begins.</span></h2>
-          <div class="pop-flower blue">✿</div>
-          <div class="pop-flower peach">✽</div>
-          <div class="bouquet bouquet-left" aria-hidden="true">❀✿❁</div>
-          <div class="bouquet bouquet-right" aria-hidden="true">✽❀✿</div>
-          <div class="floating-petal petal-1">✿</div>
-          <div class="floating-petal petal-2">❀</div>
-          <div class="floating-petal petal-3">✽</div>
-          <p class="body-copy">
-            To the people who have been part of our story, we would love for you to be
-            part of this beautiful day, too.
-          </p>
-          <p class="script">Please reserve our date.</p>
-          <div class="date-card">
-            <span>Tuesday</span>
-            <strong>May 11</strong>
-            <span>2027</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Page 2 -->
-      <section class="page page-two" data-page="2">
-        <div class="paper">
-          <p class="tiny">CHAPTER TWO</p>
-          <h2>The Day<br><span>We Say “I Do”</span></h2>
-
-          <div class="event-floral-arch" aria-hidden="true">
-            <span>❀</span><span>✿</span><span>❁</span><span>✽</span><span>❀</span>
-          </div>
-          <div class="event-wrap">
-            <div class="event">
-              <div class="icon">♡</div>
-              <div>
-                <small>THE CEREMONY</small>
-                <h3>Holy Matrimony</h3>
-                <strong>2:00 PM</strong>
-                <p>Parish of Immaculate Heart of Mary</p>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="event">
-              <div class="icon">✦</div>
-              <div>
-                <small>THE RECEPTION</small>
-                <h3>Celebration</h3>
-                <strong>3:30 PM</strong>
-                <p>The Chandelier Events Place</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="tiny bottom-note">Formal invitation to follow</p>
-        </div>
-      </section>
-
-      <!-- Page 3 -->
-      <section class="page page-three" data-page="3">
-        <div class="paper note-paper">
-          <div class="note-flower note-flower-left" aria-hidden="true">❀</div>
-          <div class="note-flower note-flower-right" aria-hidden="true">✿</div>
-          <div class="seal">VIP</div>
-          <p class="tiny">A SPECIAL NOTE FOR YOU</p>
-          <h2>Please<br><span>save our date.</span></h2>
-          <p class="body-copy">
-            Before the formal invitation arrives, we wanted you to be among the first to know.
-            We hope you can keep this day open for us as we begin this next chapter together.
-          </p>
-          <div class="floral-divider">❦</div>
-          <p class="script">We can't wait to celebrate with you.</p>
-          <p class="signature">With love,<br><span>Joyce &amp; Ken</span></p>
-        </div>
-      </section>
-
-      <!-- Back cover -->
-      <section class="page back-page" data-page="4">
-        <div class="back-inner">
-          <div class="back-flower">✿</div>
-          <p class="tiny">MAY 11, 2027</p>
-          <h2>Joyce <i>&amp;</i> Ken</h2>
-          <p>Our next chapter starts here.</p>
-          <button class="small-btn" id="replay">Read again ↻</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="controls">
-      <button class="nav-btn" id="prev" aria-label="Previous page">←</button>
-      <span id="pageLabel">Cover</span>
-      <button class="nav-btn" id="next" aria-label="Next page">→</button>
-    </div>
-    <p class="hint">Tap the pages or use the arrows to turn the story</p>
-  </main>
-
-  <script src="script.js"></script>
+  <div class="controls">
+    <button id="prev" disabled>←</button>
+    <span id="label">COVER</span>
+    <button id="next">→</button>
+  </div>
+  <p class="swipe">Tap the book or swipe to turn the page</p>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
