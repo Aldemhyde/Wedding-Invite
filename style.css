@@ -262,3 +262,84 @@ button{font:inherit}
     left:-95px;top:-90px;background:var(--butter);
   }
 }
+
+
+/* v5 — RESTORE THE FLOWERS: make the florals a major visual feature again */
+.floral-cloud{
+  display:block !important;
+  opacity:1 !important;
+  filter:saturate(1.28) brightness(1.06) contrast(1.02) !important;
+  z-index:1 !important;
+}
+
+.hero-flower-left,
+.hero-flower-right,
+.opening-flower-left,
+.opening-flower-right,
+.dedication-left,
+.dedication-right,
+.couple-flower,
+.final-left,
+.final-right{
+  opacity:1 !important;
+}
+
+/* Bigger, more visible hydrangea clusters */
+.hero-flower-left{width:410px !important;height:410px !important;left:-115px !important;bottom:-125px !important}
+.hero-flower-right{width:390px !important;height:390px !important;right:-115px !important;top:-120px !important}
+.opening-flower-left{width:430px !important;height:430px !important;left:-145px !important;bottom:-145px !important}
+.opening-flower-right{width:400px !important;height:400px !important;right:-135px !important;top:-135px !important}
+.dedication-left{width:440px !important;height:440px !important;left:-150px !important;bottom:-155px !important}
+.dedication-right{width:410px !important;height:410px !important;right:-145px !important;top:-145px !important}
+.couple-flower{width:430px !important;height:430px !important;right:-145px !important;bottom:-150px !important}
+.final-left{width:420px !important;height:420px !important;left:-135px !important;bottom:-145px !important}
+.final-right{width:400px !important;height:400px !important;right:-135px !important;top:-140px !important}
+
+/* Additional soft floral corners so every page feels like a spring invitation */
+.hero::after,
+.invitation-page::after,
+.dedication-page::after,
+.details-page::after,
+.couple-page::after,
+.final-page::after{
+  content:"";
+  position:absolute;
+  width:290px;
+  height:290px;
+  background-image:url("images/florals/hydrangea-light.jpg");
+  background-size:cover;
+  background-position:center;
+  opacity:.88;
+  filter:saturate(1.25) brightness(1.08);
+  pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle at center,#000 42%,rgba(0,0,0,.92) 56%,transparent 76%);
+  mask-image:radial-gradient(circle at center,#000 42%,rgba(0,0,0,.92) 56%,transparent 76%);
+  z-index:1;
+}
+
+.hero::after{right:8%;bottom:-150px;transform:rotate(-10deg)}
+.invitation-page::after{left:8%;top:-155px;transform:rotate(8deg)}
+.dedication-page::after{right:7%;bottom:-155px;background-image:url("images/florals/hydrangea-blush.jpg")}
+.details-page::after{left:-90px;top:20%;background-image:url("images/florals/hydrangea-blue.jpg")}
+.couple-page::after{right:5%;top:-135px;background-image:url("images/florals/hydrangea-blush.jpg")}
+.final-page::after{left:8%;top:-150px;background-image:url("images/florals/hydrangea-light.jpg")}
+
+/* Keep content above flowers */
+.hero-copy,.invitation-area,.page-content,.dedication-card,
+.details-content,.couple-photo,.couple-copy,.final-page h2,
+.final-page .kicker,.final-date{z-index:3 !important}
+
+@media(max-width:560px){
+  .floral-cloud{transform:none !important}
+  .hero-flower-left,.opening-flower-left,.dedication-left,.final-left{
+    width:300px !important;height:300px !important;left:-105px !important;
+  }
+  .hero-flower-right,.opening-flower-right,.dedication-right,.final-right{
+    width:285px !important;height:285px !important;right:-105px !important;
+  }
+  .couple-flower{width:300px !important;height:300px !important;right:-110px !important}
+  .hero::after,.invitation-page::after,.dedication-page::after,
+  .details-page::after,.couple-page::after,.final-page::after{
+    width:210px;height:210px;
+  }
+}
