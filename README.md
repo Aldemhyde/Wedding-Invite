@@ -1,10 +1,8 @@
-# Joyce & Ken Wedding Invitation — Storybook Rebuild v2
+# Joyce & Ken — Storybook Rebuild v3
 
-This is a fresh rebuild, not a CSS override.
-
-Changes in v2:
-- Reworked text hierarchy to prevent overlap and improve readability.
-- Removed repeated J & K monograms.
-- Moved Joyce & Ken away from the subtitle/hero hierarchy.
-- Replaced sharp flower icons and geometric floral decorations with soft rounded petal clusters.
-- Simplified the envelope front so the composition has more breathing room.
+Fresh rebuild focused on the parts that were not working:
+- Brighter, happier spring palette (blue, blush, peach, lilac, mint).
+- Removed CSS-drawn flower icons and angular floral shapes.
+- Replaced them with soft photographic hydrangea treatments from the visual references supplied in this conversation.
+- Every floral image is feathered with a radial mask so there are no hard square, diagonal, or sharp edges.
+- Typography, invitation flow, wedding details, ring page, and couple page were intentionally preserved.
