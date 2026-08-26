@@ -80,3 +80,19 @@ document.addEventListener("keydown", e => {
 });
 
 render();
+
+
+// Magical dust / firefly particles
+const sparkleBox = document.getElementById("sparkles");
+const sparkleChars = ["✦", "·", "✧", "•"];
+for (let i = 0; i < 34; i++) {
+  const s = document.createElement("span");
+  s.className = "sparkle";
+  s.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+  s.style.left = `${Math.random() * 100}%`;
+  s.style.top = `${35 + Math.random() * 65}%`;
+  s.style.setProperty("--dur", `${4 + Math.random() * 5}s`);
+  s.style.setProperty("--delay", `${Math.random() * 6}s`);
+  s.style.fontSize = `${5 + Math.random() * 8}px`;
+  sparkleBox.appendChild(s);
+}
