@@ -1,10 +1,10 @@
-const invitationButton = document.getElementById("envelopeButton");
-const invitationInstruction = document.getElementById("envelopeInstruction");
+const button = document.getElementById("invitationButton");
+const tapText = document.getElementById("tapText");
 
-invitationButton.addEventListener("click", () => {
-  const isOpen = invitationButton.classList.toggle("open");
-  invitationButton.setAttribute("aria-expanded", String(isOpen));
-  invitationInstruction.textContent = isOpen
-    ? "Tap again to close your invitation"
-    : "Tap to open your invitation";
+button.addEventListener("click", () => {
+  const isOpen = button.classList.toggle("open");
+  button.setAttribute("aria-expanded", String(isOpen));
+  tapText.textContent = isOpen
+    ? "Tap again to close"
+    : "Tap the invitation to open";
 });

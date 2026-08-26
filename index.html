@@ -1,189 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#eaf1f6">
-  <title>Joyce & Ken | May 11, 2027</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyce & Ken | A Special Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-monogram">J <span>&amp;</span> K</div>
-  <div class="header-center">
-    <span>JOYCE &amp; KEN</span>
-    <small>MAY 11, 2027</small>
-  </div>
-  <div class="header-bloom">✿</div>
-</header>
+  <!-- INTRO -->
+  <main>
+    <section class="hero">
+      <div class="hero-flower flower-a">✿</div>
+      <div class="hero-flower flower-b">❀</div>
+      <div class="hero-flower flower-c">✦</div>
 
-<main>
+      <div class="hero-copy">
+        <p class="kicker">JOYCE & KEN · MAY 11, 2027</p>
+        <h1>A little piece of<br><em>springtime magic.</em></h1>
+        <p class="intro-text">
+          We have prepared something special for someone very dear to our hearts.
+        </p>
+      </div>
 
-  <!-- ENVELOPE EXPERIENCE -->
-  <section class="hero soft-garden-hero" id="top">
-    <div class="watercolor wash-a"></div>
-    <div class="watercolor wash-b"></div>
-    <div class="watercolor wash-c"></div>
+      <div class="invitation-area">
+        <button class="invitation-button" id="invitationButton" aria-expanded="false">
+          <span class="paper-shadow"></span>
 
-    <div class="garden-photo garden-photo-left"></div>
-    <div class="garden-photo garden-photo-right"></div>
-
-    <div class="petal petal-a">✿</div>
-    <div class="petal petal-b">❀</div>
-    <div class="petal petal-c">✦</div>
-    <div class="petal petal-d">✿</div>
-
-    <div class="hero-copy">
-      <p class="eyebrow">JOYCE &amp; KEN · MAY 11, 2027</p>
-      <h1>A little piece of<br><em>springtime magic.</em></h1>
-      <p>We have prepared something special for someone very dear to our hearts.</p>
-    </div>
-
-    <div class="stationery-stage">
-      <button class="stationery-button" id="envelopeButton" aria-expanded="false" aria-label="Open or close invitation">
-        <div class="stationery-shadow"></div>
-
-        <div class="invitation-card">
-          <div class="card-inner">
-            <p>A SPECIAL INVITATION</p>
-            <h2>Joyce <span>&amp;</span> Ken</h2>
-            <div class="card-flourish">✿</div>
+          <article class="invitation-paper">
+            <span class="paper-flower pf-one">✿</span>
+            <span class="paper-flower pf-two">❀</span>
+            <p>A SPECIAL INVITATION FROM</p>
+            <h2>Joyce <span>&</span> Ken</h2>
+            <div class="paper-divider">✦</div>
             <small>FOR SOMEONE VERY DEAR TO OUR HEARTS</small>
+          </article>
+
+          <div class="envelope-pocket">
+            <div class="pocket-label">
+              <span>WITH LOVE</span>
+              <strong>J <i>&</i> K</strong>
+            </div>
+            <div class="seal">J<span>&</span>K</div>
           </div>
-        </div>
+        </button>
 
-        <div class="soft-envelope">
-          <div class="envelope-pattern"></div>
-          <div class="envelope-label">
-            <span>WITH LOVE</span>
-            <strong>J <i>&amp;</i> K</strong>
-          </div>
-          <div class="wax-seal">J<span>&amp;</span>K</div>
-        </div>
-      </button>
+        <p class="tap-text" id="tapText">Tap the invitation to open</p>
+      </div>
+    </section>
 
-      <p class="envelope-instruction" id="envelopeInstruction">Tap to open your invitation</p>
-      <p class="scroll-note">A special message awaits below <span>↓</span></p>
-    </div>
-  </section>
+    <!-- INVITATION -->
+    <section class="page invitation-page">
+      <div class="page-content">
+        <p class="kicker">A SPECIAL INVITATION FROM</p>
+        <h2 class="display-name">Joyce <span>&</span> Ken</h2>
+        <div class="divider">✦</div>
+        <p class="body-copy">
+          With joyful hearts, we invite you to celebrate with us as we begin our
+          beautiful journey as husband and wife.
+        </p>
+        <p class="date">MAY 11, 2027</p>
+      </div>
+    </section>
 
-  <!-- INVITATION -->
-  <section class="invitation-sheet" id="invitation">
-    <div class="sheet-border"></div>
-    <div class="sheet-floral floral-top"></div>
-    <div class="sheet-floral floral-bottom"></div>
+    <!-- VIP DEDICATION -->
+    <section class="page dedication-page">
+      <div class="dedication-card">
+        <span class="corner-flower top-left">✿</span>
+        <span class="corner-flower top-right">❀</span>
+        <span class="corner-flower bottom-left">❀</span>
+        <span class="corner-flower bottom-right">✿</span>
 
-    <div class="sheet-content">
-      <div class="monogram">J <span>&amp;</span> K</div>
-      <p class="eyebrow">A SPECIAL INVITATION FROM</p>
-      <h2>Joyce <span>&amp;</span> Ken</h2>
-      <div class="ornament">✦</div>
-      <p class="invite-copy">
-        With joyful hearts, we invite you to celebrate with us as we begin our beautiful journey as husband and wife.
-      </p>
-      <p class="wedding-date">MAY 11, 2027</p>
-    </div>
-  </section>
-
-
-  <!-- NINONG / NINANG DEDICATION -->
-  <section class="dedication-section">
-    <div class="dedication-card">
-      <div class="dedication-floral dedication-left"></div>
-      <div class="dedication-floral dedication-right"></div>
-      <div class="mini-blooms mini-left">✿ &nbsp; ✦ &nbsp; ❀</div>
-      <div class="mini-blooms mini-right">❀ &nbsp; ✿ &nbsp; ✦</div>
-      <div class="dedication-content">
-        <p class="eyebrow">TO SOMEONE VERY DEAR TO US</p>
+        <p class="kicker">TO SOMEONE VERY DEAR TO US</p>
         <h2>A special place<br>in our <em>forever.</em></h2>
-        <div class="ornament">✦</div>
-        <p class="dedication-message">
-          As we prepare to begin our life together, we are reminded of the people whose love,
-          guidance, and presence have made our journey even more meaningful.
+        <div class="divider">✦</div>
+
+        <p>
+          As we prepare to begin our life together, we are reminded of the people
+          whose love, guidance, and presence have made our journey even more meaningful.
         </p>
-        <p class="dedication-message">
-          It would be a great honor and blessing for us if you would stand with us as one of our
-          beloved <strong>Ninong / Ninang</strong> and guide us as we begin this new chapter of our lives.
+        <p>
+          It would be a great honor and blessing for us if you would stand with us
+          as one of our beloved <strong>Ninong / Ninang</strong> and guide us as we
+          begin this new chapter of our lives.
         </p>
-        <p class="dedication-question">Will you do us the honor?</p>
-        <p class="dedication-signature">With love, Joyce & Ken</p>
+
+        <p class="question">Will you do us the honor?</p>
+        <p class="signature">WITH LOVE, JOYCE & KEN</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- DETAILS -->
-  <section class="details-section">
-    <div class="details-wrap">
-      <div class="details-copy">
-        <p class="eyebrow">THE WEDDING DAY</p>
-        <h2>Our next chapter<br><em>begins here.</em></h2>
-        <p class="intro-copy">We would be honored to celebrate this meaningful day with you.</p>
+    <!-- WEDDING DETAILS -->
+    <section class="page details-page">
+      <div class="details-content">
+        <div class="details-text">
+          <p class="kicker">SAVE THE DATE</p>
+          <h2>Our Wedding Day</h2>
 
-        <div class="event">
-          <div class="event-symbol">✝</div>
-          <div>
-            <small>THE CEREMONY</small>
-            <strong>2:00 PM</strong>
-            <p>Parish of Immaculate Heart of Mary</p>
+          <div class="event">
+            <span class="event-label">CEREMONY</span>
+            <h3>Parish of Immaculate Heart of Mary</h3>
+            <p>May 11, 2027 · 2:00 PM</p>
+          </div>
+
+          <div class="event">
+            <span class="event-label">RECEPTION</span>
+            <h3>The Chandelier Events Place</h3>
+            <p>3:30 PM</p>
           </div>
         </div>
 
-        <div class="event">
-          <div class="event-symbol">✦</div>
-          <div>
-            <small>THE CELEBRATION</small>
-            <strong>3:30 PM</strong>
-            <p>The Chandelier Events Place</p>
-          </div>
-        </div>
-
-        <p class="formal-note">Formal invitation and complete wedding details will follow.</p>
+        <figure class="ring-photo">
+          <img src="images/ring.jpg" alt="Joyce and Ken's wedding ring">
+        </figure>
       </div>
+    </section>
 
-      <div class="ring-feature">
-        <div class="ring-card">
-          <img src="./images/ring.jpg" alt="Joyce and Ken's engagement ring">
-        </div>
-        <p>The beginning of our forever. ♡</p>
+    <!-- COUPLE -->
+    <section class="page couple-page">
+      <figure class="couple-photo">
+        <img src="images/couple.jpg" alt="Joyce and Ken">
+      </figure>
+      <div class="couple-copy">
+        <p class="kicker">OUR NEXT CHAPTER</p>
+        <h2>And so, our<br><em>forever begins.</em></h2>
+        <p>We would be honored to have you beside us on this beautiful day.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- STORY -->
-  <section class="story-section">
-    <div class="story-photo">
-      <img src="./images/proposal.jpg" alt="Joyce and Ken">
-    </div>
-    <div class="story-copy">
-      <p class="eyebrow">OUR STORY</p>
-      <h2>One beautiful <em>yes.</em></h2>
-      <p>From a question asked with love to a promise we are now preparing to make, we are so excited for the beautiful journey ahead.</p>
-      <div class="script-line">And now, forever.</div>
-    </div>
-  </section>
+    <!-- END -->
+    <section class="final-page">
+      <span class="final-flower ff1">✿</span>
+      <span class="final-flower ff2">❀</span>
+      <span class="final-flower ff3">✦</span>
+      <p class="kicker">WITH LOVE</p>
+      <h2>Joyce <span>&</span> Ken</h2>
+      <p class="final-date">MAY 11, 2027</p>
+    </section>
+  </main>
 
-  <!-- FINAL -->
-  <section class="final-section">
-    <div class="final-floral"></div>
-    <div class="final-bubbles">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="final-content">
-      <div class="monogram">J <span>&amp;</span> K</div>
-      <p class="eyebrow">PLEASE SAVE THE DATE</p>
-      <h2>May 11,<br><em>2027</em></h2>
-      <p>We would love to celebrate with you.</p>
-      <div class="ornament">✦</div>
-      <p class="final-names">Joyce & Ken</p>
-    </div>
-  </section>
-
-</main>
-
-<script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
