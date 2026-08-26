@@ -349,3 +349,324 @@ button{font-family:inherit}
   .dedication-message{font-size:19px}
   .dedication-content h2{font-size:55px}
 }
+
+
+/* =========================================================
+   LIVELIER WHIMSICAL SPRING REFINEMENT
+   Softer proportions, rounded compositions, more movement.
+   ========================================================= */
+
+.site-header{
+  min-height:72px;
+  padding:0 6vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:rgba(255,253,250,.92);
+  border-bottom:1px solid rgba(185,154,103,.14);
+}
+.header-monogram{
+  font:400 42px/1 "Great Vibes",cursive;
+  color:var(--blue-deep);
+  white-space:nowrap;
+}
+.header-monogram span{color:var(--blush);font-size:.62em}
+.header-center{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  font-size:8px;
+  letter-spacing:.22em;
+}
+.header-center small{
+  font-size:8px;
+  letter-spacing:.18em;
+  color:#87939b;
+}
+.header-bloom{
+  width:38px;height:38px;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#f5d9df,#d8e8f4);
+  color:var(--blue-deep);
+  font-size:19px;
+}
+
+/* A lighter, more airy hero composition */
+.hero{
+  min-height:calc(100svh - 72px);
+  grid-template-columns:minmax(300px,.78fr) minmax(420px,1.22fr);
+  gap:2vw;
+  padding:4vw 7vw 5vw;
+  background:
+    radial-gradient(circle at 6% 10%,rgba(205,226,241,.72),transparent 25%),
+    radial-gradient(circle at 92% 13%,rgba(248,211,219,.55),transparent 25%),
+    radial-gradient(circle at 78% 88%,rgba(243,213,190,.46),transparent 23%),
+    linear-gradient(135deg,#fbfbf8 0%,#f8f5ef 55%,#edf5f7 100%);
+}
+.hero-copy{max-width:470px;padding:20px 0 20px;align-self:center}
+.hero-copy .eyebrow{color:var(--blue-deep);margin-bottom:22px}
+.hero-copy h1{
+  font-size:clamp(52px,5vw,78px);
+  letter-spacing:-.025em;
+}
+.hero-copy>p:last-child{
+  font-size:22px;
+  max-width:350px;
+  margin-top:24px;
+}
+
+/* Keep the online floral photos subtle, then layer happy rounded blooms over them. */
+.floral{opacity:.13;filter:saturate(.75)}
+.floral-left{width:360px;height:460px;left:-105px;bottom:-100px}
+.floral-right{width:390px;height:470px;right:-125px;top:-115px}
+
+/* Bubble-flower clusters: rounded, springy and playful instead of boxy. */
+.bubble-bloom{
+  position:absolute;
+  width:160px;height:160px;
+  z-index:2;
+  pointer-events:none;
+  opacity:.95;
+}
+.bubble-bloom i{
+  position:absolute;
+  width:62px;height:62px;border-radius:50%;
+  display:block;
+  box-shadow:0 12px 24px rgba(80,96,108,.07);
+}
+.bubble-bloom i:nth-child(1){left:48px;top:0;background:#d6e8f4}
+.bubble-bloom i:nth-child(2){right:0;top:45px;background:#f3cdd7}
+.bubble-bloom i:nth-child(3){right:24px;bottom:0;background:#f3d6bd}
+.bubble-bloom i:nth-child(4){left:0;bottom:0;background:#d5dfcc}
+.bubble-bloom i:nth-child(5){left:0;top:45px;background:#e1d9ef}
+.bubble-bloom::after{
+  content:"✦";position:absolute;left:65px;top:61px;
+  width:32px;height:32px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#fffdfa;color:var(--gold);
+  box-shadow:0 7px 16px rgba(80,96,108,.10);
+}
+.bloom-one{left:28%;top:6%;transform:scale(.62) rotate(-12deg)}
+.bloom-two{right:5%;bottom:8%;transform:scale(.75) rotate(16deg)}
+.bloom-three{left:5%;bottom:9%;transform:scale(.48) rotate(10deg)}
+
+.envelope-stage{
+  height:500px;
+  max-width:650px;
+  width:100%;
+  align-self:center;
+}
+.envelope-button{
+  width:min(570px,92%);
+  height:390px;
+}
+.envelope{
+  height:280px;
+  bottom:48px;
+}
+.letter{transform:translateY(54px)}
+.envelope-button.open .letter{transform:translateY(-108px)}
+.continue-hint{
+  position:absolute;
+  bottom:-6px;
+  margin:0;
+  font-size:8px;
+  line-height:1.7;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#78858d;
+  text-align:center;
+  max-width:330px;
+}
+.continue-hint span{
+  display:block;
+  margin-top:4px;
+  font-size:16px;
+  color:var(--blue-deep);
+}
+
+/* Invitation page: remove the "giant empty box" feeling */
+.invitation-sheet{
+  min-height:92svh;
+  padding:90px 25px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(215,232,244,.42),transparent 20%),
+    radial-gradient(circle at 87% 80%,rgba(242,210,219,.38),transparent 23%),
+    linear-gradient(145deg,#fffdfa,#f8f4ed);
+}
+.sheet-border{
+  border-radius:48px;
+  inset:36px;
+  border:1px solid rgba(185,154,103,.28);
+}
+.sheet-content{max-width:660px}
+.sheet-content .monogram{font-size:50px}
+.sheet-content h2{
+  font-size:clamp(72px,9vw,118px);
+  margin:15px 0 13px;
+}
+.invite-copy{
+  font-size:22px;
+  line-height:1.5;
+  max-width:540px;
+}
+.wedding-date{margin-top:24px}
+.sheet-floral{opacity:.10;border-radius:50%}
+
+/* The VIP request becomes a soft rounded garden card, not a square box. */
+.dedication-section{
+  background:
+    radial-gradient(circle at 5% 18%,rgba(213,231,244,.70),transparent 24%),
+    radial-gradient(circle at 94% 85%,rgba(242,207,217,.55),transparent 27%),
+    linear-gradient(135deg,#f9faf6,#f9f2ed);
+}
+.dedication-card{
+  width:min(920px,100%);
+  min-height:690px;
+  border-radius:56% 44% 48% 52% / 13% 14% 12% 14%;
+  border:0;
+  padding:95px 10vw 85px;
+  background:
+    radial-gradient(circle at 18% 16%,rgba(213,231,244,.34),transparent 19%),
+    radial-gradient(circle at 83% 84%,rgba(242,207,217,.30),transparent 20%),
+    rgba(255,253,250,.92);
+  box-shadow:0 28px 70px rgba(67,77,85,.10);
+}
+.dedication-card::before{
+  inset:18px;
+  border-radius:56% 44% 48% 52% / 13% 14% 12% 14%;
+  border:1px solid rgba(185,154,103,.20);
+}
+.dedication-content h2{
+  font-size:clamp(52px,6vw,82px);
+  margin-bottom:10px;
+}
+.dedication-message{
+  font-size:22px;
+  line-height:1.55;
+}
+.dedication-question{
+  font-size:48px;
+  margin-top:25px;
+}
+.mini-blooms{
+  position:absolute;
+  z-index:4;
+  color:var(--blue-deep);
+  font-size:22px;
+  letter-spacing:6px;
+  opacity:.75;
+}
+.mini-left{left:9%;bottom:15%;transform:rotate(-12deg)}
+.mini-right{right:9%;top:15%;transform:rotate(12deg);color:var(--blush)}
+
+/* Details section gets more spring energy without becoming cluttered. */
+.details-section{
+  min-height:92svh;
+  background:
+    radial-gradient(circle at 10% 12%,rgba(244,213,190,.34),transparent 22%),
+    radial-gradient(circle at 92% 88%,rgba(205,222,198,.42),transparent 24%),
+    #eef3f1;
+}
+.details-wrap{gap:7vw}
+.details-copy h2{margin-bottom:18px}
+.event{
+  border-top:1px solid rgba(185,154,103,.22);
+  padding:18px 0;
+  margin-top:15px;
+}
+.ring-card{
+  border-radius:48% 52% 46% 54% / 6% 7% 8% 9%;
+  padding:13px 13px 38px;
+  transform:rotate(2deg);
+}
+.ring-card img{border-radius:48% 52% 6% 7% / 4% 4% 5% 5%}
+
+/* Story section: softer and more romantic, with rounded photo presentation. */
+.story-section{
+  min-height:92svh;
+  background:
+    radial-gradient(circle at 85% 13%,rgba(243,210,220,.42),transparent 25%),
+    radial-gradient(circle at 9% 88%,rgba(210,227,240,.54),transparent 24%),
+    #dfeaf0;
+}
+.story-photo{
+  border-radius:48% 52% 46% 54% / 5% 6% 7% 8%;
+  padding:12px 12px 38px;
+}
+.story-photo img{
+  border-radius:48% 52% 5% 6% / 4% 4% 5% 5%;
+}
+
+/* Final page becomes celebratory rather than solemn. */
+.final-section{
+  min-height:92svh;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(215,232,244,.58),transparent 25%),
+    radial-gradient(circle at 87% 18%,rgba(243,207,217,.48),transparent 23%),
+    radial-gradient(circle at 80% 86%,rgba(243,214,190,.43),transparent 25%),
+    linear-gradient(145deg,#fffaf4,#eef5f6);
+}
+.final-section::before{
+  inset:34px;
+  border-radius:48px;
+  border:1px solid rgba(185,154,103,.24);
+}
+.final-bubbles{
+  position:absolute;inset:0;pointer-events:none;
+}
+.final-bubbles span{
+  position:absolute;border-radius:50%;opacity:.72;
+  box-shadow:0 14px 28px rgba(75,91,101,.08);
+}
+.final-bubbles span:nth-child(1){width:85px;height:85px;background:#d7e9f4;left:8%;top:18%}
+.final-bubbles span:nth-child(2){width:58px;height:58px;background:#f2cbd5;left:17%;top:29%}
+.final-bubbles span:nth-child(3){width:94px;height:94px;background:#f1d2b8;right:9%;top:22%}
+.final-bubbles span:nth-child(4){width:52px;height:52px;background:#d6dfcb;right:18%;top:34%}
+.final-bubbles span:nth-child(5){width:70px;height:70px;background:#e0d8ed;left:12%;bottom:14%}
+.final-bubbles span:nth-child(6){width:88px;height:88px;background:#d7e9f4;right:12%;bottom:12%}
+.final-content h2{font-size:clamp(74px,10vw,132px)}
+.final-content .ornament{font-size:24px}
+
+@media(max-width:950px){
+  .site-header{min-height:64px}
+  .hero{min-height:calc(100svh - 64px);grid-template-columns:1fr;padding:42px 22px 28px}
+  .hero-copy{text-align:center;padding:8px 0 0}
+  .hero-copy>p:last-child{margin-left:auto;margin-right:auto}
+  .envelope-stage{height:455px}
+  .bloom-one{left:8%;top:22%}
+  .bloom-two{right:-4%;bottom:4%}
+  .bloom-three{left:-4%;bottom:4%}
+}
+@media(max-width:560px){
+  .site-header{padding:0 18px}
+  .header-center{gap:10px;font-size:7px}
+  .header-center small{font-size:7px}
+  .header-bloom{width:32px;height:32px}
+  .hero-copy h1{font-size:48px}
+  .envelope-stage{height:410px}
+  .envelope-button{height:350px;width:min(430px,96%)}
+  .envelope{height:220px;bottom:42px}
+  .letter-border h2{font-size:41px}
+  .letter{transform:translateY(45px)}
+  .envelope-button.open .letter{transform:translateY(-84px)}
+  .continue-hint{bottom:-10px;font-size:7px;max-width:260px}
+  .bubble-bloom{transform:scale(.38)!important}
+  .bloom-one{left:-7%;top:24%}
+  .bloom-two{right:-8%;bottom:2%}
+  .bloom-three{display:none}
+  .sheet-border,.final-section::before{inset:16px;border-radius:30px}
+  .invitation-sheet{padding:70px 25px}
+  .invite-copy{font-size:20px}
+  .dedication-card{
+    border-radius:52px;
+    padding:75px 28px 70px;
+  }
+  .dedication-card::before{border-radius:42px;inset:12px}
+  .dedication-message{font-size:19px}
+  .mini-blooms{font-size:15px;letter-spacing:2px}
+  .mini-left{left:9%;bottom:6%}
+  .mini-right{right:7%;top:8%}
+  .details-section,.story-section{min-height:auto;padding-top:80px;padding-bottom:80px}
+}

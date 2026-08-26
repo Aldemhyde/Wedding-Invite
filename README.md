@@ -32,3 +32,13 @@ Settings → Pages → Deploy from a branch → main → /(root)
 - Replaced the ambiguous “You are invited!” wording on the envelope with “A Special Invitation”.
 - Clarified that the invitation is **from Joyce & Ken**.
 - Added a dedicated VIP page asking the recipient to become Joyce & Ken’s **Ninong / Ninang**.
+
+
+## Latest design refresh
+- Removed the redundant upper-right “Open the Invitation” button.
+- Rebalanced the hero and envelope proportions.
+- Reworked the layout to feel airy and editorial instead of boxy.
+- Added rounded, bubble-like whimsical spring flower clusters in powder blue, blush, peach, sage, and lavender.
+- Made the invitation and VIP dedication pages use softer rounded forms.
+- Increased spacing and refined text hierarchy for easier reading.
+- Kept the separate `index.html`, `style.css`, and `script.js` structure.
