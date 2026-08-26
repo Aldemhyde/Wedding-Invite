@@ -53,11 +53,4 @@ window.addEventListener('beforeunload', () => {
   let vol = music.volume;
   const fadeOut = setInterval(() => {
     if (vol > 0) {
-      vol -= 0.02;
-      music.volume = Math.max(vol, 0);
-    } else {
-      clearInterval(fadeOut);
-      music.pause();
-    }
-  }, 200);
-});
+      vol -=
