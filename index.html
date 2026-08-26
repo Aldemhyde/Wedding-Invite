@@ -2,95 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joyce & Ken — Wedding Day, May 11, 2027">
-  <title>Joyce & Ken | May 11, 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#b9d1ee">
+  <meta name="description" content="Joyce & Ken — Wedding Invitation, May 11, 2027">
+  <title>Joyce & Ken | Our Wedding Story</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <div class="petals petals-left"></div>
-      <div class="petals petals-right"></div>
-      <div class="hero-card">
-        <p class="eyebrow">A WEDDING CELEBRATION</p>
-        <p class="small-script">Please reserve this date</p>
-        <h1>Joyce <span>&amp;</span> Ken</h1>
-        <div class="ornament">✦</div>
-        <p class="date">MAY 11, 2027</p>
-        <p class="location">METRO MANILA, PHILIPPINES</p>
-        <a class="scroll-link" href="#details">View our day ↓</a>
-      </div>
-    </section>
+  <div class="ambient-flower flower-a">✿</div>
+  <div class="ambient-flower flower-b">✽</div>
 
-    <section class="intro" id="details">
-      <p class="eyebrow">WITH JOY IN OUR HEARTS</p>
-      <h2>We’re getting married!</h2>
-      <p class="copy">
-        To the people who have been part of our story, we would love to celebrate this beautiful
-        day with you. Please consider this our early notice to reserve your time for our wedding.
-      </p>
-      <p class="script">We can’t wait to celebrate with you.</p>
-    </section>
+  <div class="intro-screen" id="intro">
+    <div class="intro-flower">✿</div>
+    <p class="tiny">A LITTLE WEDDING STORY</p>
+    <h1>Joyce <span>&amp;</span> Ken</h1>
+    <p class="intro-date">MAY 11, 2027</p>
+    <button id="openBook" class="gold-btn">Open Our Invitation <span>♡</span></button>
+  </div>
 
-    <section class="timeline">
-      <div class="section-heading">
-        <p class="eyebrow">THE DAY</p>
-        <h2>Our Wedding</h2>
-      </div>
+  <main class="scene" id="scene" aria-label="Interactive wedding invitation">
+    <div class="book">
+      <div class="book-shadow"></div>
 
-      <div class="event-grid">
-        <article class="event-card ceremony">
-          <div class="event-number">01</div>
-          <p class="event-type">THE CEREMONY</p>
-          <h3>Holy Matrimony</h3>
-          <div class="event-time">2:00 PM</div>
-          <p class="event-place">Parish of Immaculate Heart of Mary</p>
-        </article>
+      <!-- Cover -->
+      <section class="page cover-page" data-page="0">
+        <div class="cover-inner">
+          <div class="cover-border">
+            <div class="botanical top-left">❀</div>
+            <div class="botanical top-right">✿</div>
+            <p class="tiny">THE BEGINNING OF</p>
+            <h2>Our Wedding<br><span>Story</span></h2>
+            <div class="monogram">J <i>&amp;</i> K</div>
+            <p class="cover-date">11 · 05 · 2027</p>
+            <div class="botanical bottom-left">✽</div>
+            <div class="botanical bottom-right">❁</div>
+          </div>
+        </div>
+      </section>
 
-        <div class="connector">♡</div>
+      <!-- Page 1 -->
+      <section class="page page-one" data-page="1">
+        <div class="paper">
+          <p class="tiny">CHAPTER ONE</p>
+          <h2>And so,<br><span>a new chapter begins.</span></h2>
+          <div class="pop-flower blue">✿</div>
+          <div class="pop-flower peach">✽</div>
+          <p class="body-copy">
+            To the people who have been part of our story, we would love for you to be
+            part of this beautiful day, too.
+          </p>
+          <p class="script">Please reserve our date.</p>
+          <div class="date-card">
+            <span>Tuesday</span>
+            <strong>May 11</strong>
+            <span>2027</span>
+          </div>
+        </div>
+      </section>
 
-        <article class="event-card reception">
-          <div class="event-number">02</div>
-          <p class="event-type">THE RECEPTION</p>
-          <h3>Celebration</h3>
-          <div class="event-time">3:30 PM</div>
-          <p class="event-place">The Chandelier Events Place</p>
-        </article>
-      </div>
-    </section>
+      <!-- Page 2 -->
+      <section class="page page-two" data-page="2">
+        <div class="paper">
+          <p class="tiny">CHAPTER TWO</p>
+          <h2>The Day<br><span>We Say “I Do”</span></h2>
 
-    <section class="countdown-section">
-      <p class="eyebrow">UNTIL WE SAY “I DO”</p>
-      <div class="countdown" id="countdown">
-        <div><strong id="days">--</strong><span>Days</span></div>
-        <div><strong id="hours">--</strong><span>Hours</span></div>
-        <div><strong id="minutes">--</strong><span>Minutes</span></div>
-        <div><strong id="seconds">--</strong><span>Seconds</span></div>
-      </div>
-    </section>
+          <div class="event-wrap">
+            <div class="event">
+              <div class="icon">♡</div>
+              <div>
+                <small>THE CEREMONY</small>
+                <h3>Holy Matrimony</h3>
+                <strong>2:00 PM</strong>
+                <p>Parish of Immaculate Heart of Mary</p>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="event">
+              <div class="icon">✦</div>
+              <div>
+                <small>THE RECEPTION</small>
+                <h3>Celebration</h3>
+                <strong>3:30 PM</strong>
+                <p>The Chandelier Events Place</p>
+              </div>
+            </div>
+          </div>
 
-    <section class="vip">
-      <div class="vip-card">
-        <span class="seal">VIP</span>
-        <p class="eyebrow">A LITTLE NOTE FOR YOU</p>
-        <h2>Please save our date.</h2>
-        <p>
-          Formal invitation and complete details will follow. For now, we hope you can keep
-          <strong>May 11, 2027</strong> open for us as we begin this next chapter together.
-        </p>
-        <p class="signature">With love,<br><span>Joyce &amp; Ken</span></p>
-      </div>
-    </section>
+          <p class="tiny bottom-note">Formal invitation to follow</p>
+        </div>
+      </section>
 
-    <footer>
-      <div class="footer-flower">✿</div>
-      <p>May 11, 2027</p>
-      <small>Made with love for our favorite people.</small>
-    </footer>
+      <!-- Page 3 -->
+      <section class="page page-three" data-page="3">
+        <div class="paper note-paper">
+          <div class="seal">VIP</div>
+          <p class="tiny">A SPECIAL NOTE FOR YOU</p>
+          <h2>Please<br><span>save our date.</span></h2>
+          <p class="body-copy">
+            Before the formal invitation arrives, we wanted you to be among the first to know.
+            We hope you can keep this day open for us as we begin this next chapter together.
+          </p>
+          <div class="floral-divider">❦</div>
+          <p class="script">We can't wait to celebrate with you.</p>
+          <p class="signature">With love,<br><span>Joyce &amp; Ken</span></p>
+        </div>
+      </section>
+
+      <!-- Back cover -->
+      <section class="page back-page" data-page="4">
+        <div class="back-inner">
+          <div class="back-flower">✿</div>
+          <p class="tiny">MAY 11, 2027</p>
+          <h2>Joyce <i>&amp;</i> Ken</h2>
+          <p>Our next chapter starts here.</p>
+          <button class="small-btn" id="replay">Read again ↻</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="controls">
+      <button class="nav-btn" id="prev" aria-label="Previous page">←</button>
+      <span id="pageLabel">Cover</span>
+      <button class="nav-btn" id="next" aria-label="Next page">→</button>
+    </div>
+    <p class="hint">Tap the pages or use the arrows to turn the story</p>
   </main>
 
   <script src="script.js"></script>

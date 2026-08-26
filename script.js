@@ -1,24 +1,82 @@
-const weddingDate = new Date("2027-05-11T14:00:00+08:00").getTime();
+const intro = document.getElementById("intro");
+const scene = document.getElementById("scene");
+const openBook = document.getElementById("openBook");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+const replay = document.getElementById("replay");
+const label = document.getElementById("pageLabel");
+const pages = [...document.querySelectorAll(".page")];
 
-function updateCountdown() {
-  const now = Date.now();
-  const distance = weddingDate - now;
+const labels = ["Cover", "Chapter One", "Chapter Two", "A Special Note", "The End"];
+let current = 0;
 
-  if (distance <= 0) {
-    document.getElementById("countdown").innerHTML = "<p style='grid-column:1/-1;font-family:Cormorant Garamond,serif;font-size:34px'>Today is the day! ♡</p>";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((distance / (1000 * 60)) % 60);
-  const seconds = Math.floor((distance / 1000) % 60);
-
-  document.getElementById("days").textContent = String(days).padStart(3, "0");
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+function render() {
+  pages.forEach((page, i) => {
+    const index = Number(page.dataset.page);
+    if (index < current) {
+      page.style.transform = "rotateY(-180deg)";
+      page.style.zIndex = index + 1;
+    } else {
+      page.style.transform = "rotateY(0deg)";
+      page.style.zIndex = 10 - index;
+    }
+  });
+  label.textContent = labels[current];
+  prev.disabled = current === 0;
+  next.textContent = current === pages.length - 1 ? "↻" : "→";
+  prev.style.opacity = current === 0 ? ".35" : "1";
 }
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+function turnNext() {
+  if (current < pages.length - 1) current++;
+  else current = 0;
+  render();
+}
+
+function turnPrev() {
+  if (current > 0) current--;
+  render();
+}
+
+openBook.addEventListener("click", () => {
+  intro.classList.add("hide");
+  scene.classList.add("opened");
+  current = 0;
+  render();
+});
+
+next.addEventListener("click", turnNext);
+prev.addEventListener("click", turnPrev);
+
+replay.addEventListener("click", () => {
+  current = 0;
+  render();
+});
+
+pages.forEach(page => {
+  page.addEventListener("click", (event) => {
+    if (event.target.closest("button")) return;
+    const index = Number(page.dataset.page);
+    if (index === current) turnNext();
+  });
+});
+
+let startX = null;
+scene.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+}, {passive: true});
+
+scene.addEventListener("touchend", e => {
+  if (startX === null) return;
+  const delta = e.changedTouches[0].clientX - startX;
+  if (Math.abs(delta) > 45) delta < 0 ? turnNext() : turnPrev();
+  startX = null;
+});
+
+document.addEventListener("keydown", e => {
+  if (!scene.classList.contains("opened")) return;
+  if (e.key === "ArrowRight" || e.key === " ") turnNext();
+  if (e.key === "ArrowLeft") turnPrev();
+});
+
+render();
