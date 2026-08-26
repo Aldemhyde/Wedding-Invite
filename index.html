@@ -1,38 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenrick & Joyce Ann Wedding Invitation</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joyce & Ken — May 11, 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="book">
-    <!-- Cover Page -->
-    <div class="page" id="cover">
-      <h1 class="fade-in delay1">Kenrick & Joyce Ann</h1>
-      <p class="fade-in delay2">Wedding Invitation</p>
-      <p class="hint fade-in delay3">Click to open</p>
-    </div>
-
-    <!-- Details Page -->
-    <div class="page" id="details">
-      <h1 class="fade-in delay1">Wedding Day</h1>
-      <p class="fade-in delay2">May 11, 2027</p>
-      <p class="fade-in delay2">2:00 PM — Parish of Immaculate Heart of Mary</p>
-      <p class="fade-in delay2">3:30 PM — The Chandelier Events Place</p>
-      <div class="gallery fade-in delay3">
-        <img src="images/proposal.jpg" alt="Proposal moment">
-        <img src="images/ring.jpg" alt="Engagement ring">
-        <img src="images/couple.jpg" alt="Kenrick and Joyce Ann">
-      </div>
+<div class="ambient"></div>
+<section class="welcome" id="welcome">
+  <div class="welcome-card">
+    <div class="crest">J <span>♡</span> K</div>
+    <p class="eyebrow">A PRIVATE WEDDING INVITATION</p>
+    <h1>Joyce <i>&amp;</i> Ken</h1>
+    <div class="rule"><span>✦</span></div>
+    <p class="date">11 MAY 2027</p>
+    <button id="open">Open Invitation</button>
+  </div>
+</section>
+<main class="site" id="site">
+  <div class="book-wrap">
+    <div class="book" id="book">
+      <div class="book-spine"></div>
+      <div class="spread current" id="spread"></div>
+      
     </div>
   </div>
-
-  <!-- Background Music -->
-  <audio id="bg-music" src="audio/music.mp3" preload="auto"></audio>
-  <button id="music-toggle">🔈 Mute</button>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="nav"><button id="prev">‹</button><div class="dots" id="dots"></div><button id="next">›</button></div>
+  <p class="hint">Use the arrows or swipe to turn the pages</p>
+</main>
+<script src="script.js"></script>
+</body></html>

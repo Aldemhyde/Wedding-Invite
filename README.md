@@ -1,34 +1,26 @@
-# Joyce & Ken — Storybook Wedding Invitation
+# Joyce & Ken — Elegant Physical-Invitation Style
 
-A clean, elegant storybook-style wedding invitation. This version intentionally does **not** use a pop-up effect or CSS-drawn people.
+This version was rebuilt from scratch around the idea of a real, professionally printed wedding invitation rather than a pop-up or collage.
 
-## Experience
-- Simple cover → “Begin our story”
-- Smooth, understated spread-to-spread page transitions
-- Real Joyce & Ken photos used sparingly
-- Online floral photography used as soft editorial decoration
-- Pastel blue, blush, peach, sage, cream and gold palette
-- Mobile swipe, desktop arrows, keyboard navigation and page dots
+### Design direction
+- restrained storybook/page-turn animation
+- cohesive cream paper, powder blue, blush, peach, sage and champagne-gold palette
+- online floral photography used only as soft, borderless botanical washes so the pages feel like one designed invitation
+- no cartoon people, no CSS-drawn people, no pop-up scenery
+- real photos used sparingly: proposal, couple, and the ring photo
+- no overlapping text/image elements; each page uses a dedicated layout region
 
-## Wedding details
-**May 11, 2027**
-- Ceremony: 2:00 PM — Parish of Immaculate Heart of Mary
-- Reception: 3:30 PM — The Chandelier Events Place
+### Wedding details
+May 11, 2027
+Ceremony — 2:00 PM — Parish of Immaculate Heart of Mary
+Reception — 3:30 PM — The Chandelier Events Place
 
-## GitHub Pages
-Upload:
-- `index.html`
-- `style.css`
-- `script.js`
-- the entire `images` folder
+### GitHub Pages
+Upload `index.html`, `style.css`, `script.js`, and the whole `images` folder to the root of the `main` branch. Then enable GitHub Pages from Settings → Pages → Deploy from a branch → main → /(root).
 
-to the root of your `main` branch. Then go to **Settings → Pages → Deploy from a branch → main → /(root)**.
-
-## Floral sources
-The floral decoration uses free-to-use stock photography from Pexels, including pastel blue/pink flowers, pastel bouquets and blush roses. The Pexels pages describe these images as free to use/download:
-- https://www.pexels.com/photo/bouquet-of-carnations-and-daisies-on-blue-back-16686868/
-- https://www.pexels.com/photo/a-bouquet-of-flowers-15183009/
-- https://www.pexels.com/photo/elegant-bouquet-of-blush-pink-roses-28759039/
-- https://www.pexels.com/photo/photo-of-a-white-wedding-bouquet-19590355/
-- https://www.pexels.com/photo/charming-bouquet-of-blush-pink-roses-36314592/
-- https://www.pexels.com/photo/woman-in-white-off-shoulder-dress-holding-pink-and-white-flower-bouquet-8669230/
+### Stock floral references
+The online floral imagery is from Pexels and is used as decorative background photography:
+- https://www.pexels.com/photo/blue-and-pink-flowers-18286229/
+- https://www.pexels.com/photo/elegant-white-and-blue-bridal-bouquet-on-grass-36807081/
+- https://www.pexels.com/photo/elegant-white-and-blue-flower-bouquet-display-29146562/
+- https://www.pexels.com/photo/blue-and-white-flowers-bouquet-on-table-4277883/
