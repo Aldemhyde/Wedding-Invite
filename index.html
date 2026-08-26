@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#c7d9ed">
+<title>Joyce & Ken — May 11, 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars" id="stars"></div>
+
+<section class="welcome" id="welcome">
+  <div class="welcome-card">
+    <div class="little-flower">✿</div>
+    <p>AN INVITATION FROM</p>
+    <h1>Joyce <span>&amp;</span> Ken</h1>
+    <div class="date">MAY 11, 2027</div>
+    <button id="open">Open our invitation <b>♡</b></button>
+  </div>
+</section>
+
+<main class="experience" id="experience">
+  <div class="book" id="book">
+    <div class="book-pages">
+      <div class="page-under">
+        <p class="tiny">A LITTLE NOTE</p>
+        <h2>Our story<br><i>continues here.</i></h2>
+        <p>We would love for you to be part of the day we begin our next chapter together.</p>
+        <div class="signature">Joyce &amp; Ken</div>
+      </div>
+    </div>
+
+    <div class="cover" id="cover">
+      <div class="cover-front">
+        <div class="cover-border">
+          <span class="cover-flower">❀</span>
+          <p>OUR WEDDING</p>
+          <h2>Joyce <i>&amp;</i> Ken</h2>
+          <div class="monogram">J <span>♡</span> K</div>
+          <small>11 · 05 · 2027</small>
+          <span class="cover-flower bottom">✿</span>
+        </div>
+      </div>
+      <div class="cover-back"></div>
+    </div>
+
+    <div class="diorama" id="diorama">
+      <div class="backdrop">
+        <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+        <div class="sun">☼</div>
+        <div class="arch">
+          <div class="arch-window"></div>
+          <div class="arch-door"></div>
+          <span class="cross">✝</span>
+        </div>
+        <div class="back-flower bf1">✿</div>
+        <div class="back-flower bf2">❀</div>
+        <div class="back-flower bf3">✽</div>
+      </div>
+
+      <div class="pop-layer lights">
+        <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
+      </div>
+
+      <div class="pop-layer side-flower left">
+        <span>❀</span><span>✿</span><span>❁</span>
+      </div>
+      <div class="pop-layer side-flower right">
+        <span>✽</span><span>❀</span><span>✿</span>
+      </div>
+
+      <div class="couple">
+        <div class="person bride">
+          <div class="head"></div>
+          <div class="hair"></div>
+          <div class="body"></div>
+          <div class="dress"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="person groom">
+          <div class="head"></div>
+          <div class="hair"></div>
+          <div class="body"></div>
+          <div class="legs"></div>
+          <div class="arm"></div>
+        </div>
+        <div class="heart">♡</div>
+      </div>
+
+      <div class="photo-pop proposal-pop">
+        <img src="images/proposal.jpg" alt="Joyce and Ken during their proposal moment">
+        <span>THE BEGINNING</span>
+      </div>
+      <div class="foreground">
+        <div class="flower-bed">
+          <span>❀</span><span>✿</span><span>❁</span><span>✽</span><span>❀</span>
+        </div>
+        <div class="message">
+          <p class="tiny">PLEASE SAVE OUR DATE</p>
+          <h1>Joyce <i>&amp;</i> Ken</h1>
+          <div class="date-big">MAY 11, 2027</div>
+          <p class="hint">Our wedding day</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-turn" id="pageTurn">
+      <div class="inside-page">
+        <div class="story-photo story-main">
+          <img src="images/together.jpg" alt="Joyce and Ken together">
+        </div>
+        <p class="tiny">OUR STORY</p>
+        <h2>From this moment<br><i>to forever.</i></h2>
+        <p class="story-copy">A little piece of our story, before we celebrate the next chapter with you.</p>
+        <div class="mini-gallery">
+          <div class="story-photo"><img src="images/portrait.jpg" alt="Joyce and Ken"></div>
+          <div class="story-photo"><img src="images/proposal.jpg" alt="Joyce and Ken proposal"></div>
+        </div>
+        <div class="event-preview">
+          <span>11 · 05 · 2027</span>
+          <strong>Our Wedding Day</strong>
+        </div>
+      </div>
+    </div>
+    <div class="details-page" id="detailsPage">
+      <div class="inside-page">
+        <p class="tiny">THE DAY</p>
+        <h2>When we say<br><i>“I do”</i></h2>
+        <div class="event">
+          <span>✝</span>
+          <div><small>CEREMONY · 2:00 PM</small><strong>Parish of Immaculate Heart of Mary</strong></div>
+        </div>
+        <div class="event">
+          <span>✦</span>
+          <div><small>RECEPTION · 3:30 PM</small><strong>The Chandelier Events Place</strong></div>
+        </div>
+        <p class="formal">Formal invitation to follow.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prev" disabled>←</button>
+    <span id="label">COVER</span>
+    <button id="next">→</button>
+  </div>
+  <p class="swipe">Tap the book or swipe to turn the page</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
