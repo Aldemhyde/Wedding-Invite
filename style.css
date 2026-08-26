@@ -1,33 +1,19 @@
-*{box-sizing:border-box}
-:root{--blue:#c9dbee;--blue-deep:#8eaaca;--pink:#edb0b8;--peach:#f3bf98;--sage:#cbd8bd;--cream:#fbf7ef;--paper:#fffdf9;--ink:#5b646d;--gold:#c6a269}
-html,body{margin:0;min-height:100%;font-family:Montserrat,sans-serif;color:var(--ink);background:var(--cream)}
-body{overflow-x:hidden}
-button{font:inherit}
-.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 8% 12%,#dce8f555,transparent 22%),radial-gradient(circle at 92% 85%,#f3c5b544,transparent 22%)}
-.welcome{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:linear-gradient(135deg,#fffaf3,#edf4fa);transition:opacity .7s,visibility .7s}
-.welcome.hide{opacity:0;visibility:hidden;pointer-events:none}
-.welcome-card{width:min(650px,90vw);padding:70px 35px;text-align:center;background:#fffdf9e8;border:1px solid #c6a26966;box-shadow:0 25px 80px #53606a18}
-.welcome h1{font:400 clamp(72px,13vw,125px)/.8 "Great Vibes",cursive;margin:10px 0 20px}.welcome h1 span{color:var(--pink)}
-.eyebrow{font-size:9px;letter-spacing:.3em;font-weight:500}.gold-line{color:var(--gold);margin:14px 0;font-size:20px}
-.welcome-date,.date-large{letter-spacing:.32em;font-size:11px}.welcome-copy{font:italic 21px "Cormorant Garamond";line-height:1.45;color:#89939a}
-.welcome button,.closing-page button{margin-top:25px;padding:13px 25px;background:#fff;border:1px solid #c6a26999;text-transform:uppercase;letter-spacing:.13em;font-size:9px;color:var(--ink);cursor:pointer}
-.site{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:25px 15px;opacity:0;visibility:hidden;transition:opacity .6s}.site.show{opacity:1;visibility:visible}
-.topbar{width:min(1100px,96vw);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin-bottom:15px;font-size:8px;letter-spacing:.2em;text-transform:uppercase}
-.brand{font:400 24px "Great Vibes";letter-spacing:0;text-transform:none}.brand span{color:var(--pink)}.chapter{text-align:center}.counter{text-align:right;color:#8c969d}
-.book-shell{width:min(1100px,96vw);height:min(690px,74vh);min-height:510px;perspective:1600px}
-.book{height:100%;width:100%;position:relative}
-.spread{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;visibility:hidden;transform:translateX(20px) scale(.985);transition:opacity .55s ease,transform .55s ease,visibility .55s}.spread.active{opacity:1;visibility:visible;transform:none}
-.page{position:relative;overflow:hidden;background:var(--paper);min-width:0;box-shadow:0 12px 30px #4d59631a}.page:first-child{border-radius:6px 0 0 6px;border-right:1px solid #c6a26922}.page:last-child{border-radius:0 6px 6px 0}
-.page:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#00000005,transparent 16%,transparent 84%,#00000005)}
-.cover-page,.opening-page,.story-intro,.wedding-intro,.note-page,.thank-page,.final-page,.closing-page{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:45px}
-.cover-page{background:linear-gradient(150deg,#fffaf3,#f5eee4)}.cover-content{position:relative;z-index:2}.cover-page h2{font:400 clamp(55px,7vw,88px)/.82 "Great Vibes";margin:12px 0}.cover-page h2 span,.final-page h2 span{color:var(--pink)}.cover-small{font-size:8px;letter-spacing:.25em}
-.flower-photo{position:absolute;overflow:hidden;opacity:.72;mix-blend-mode:multiply}.flower-photo img{width:100%;height:100%;object-fit:cover}.flower-top{width:230px;height:180px;left:-50px;top:-30px;transform:rotate(-10deg)}.flower-bottom{width:220px;height:150px;right:-55px;bottom:-30px;transform:rotate(8deg)}
-.opening-page{background:#f9f6ef}.page-photo{width:74%;height:48%;overflow:hidden;margin-bottom:20px}.page-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) sepia(.04)}.opening-copy{max-width:360px}.opening-copy h2,.story-intro h2,.wedding-intro h2,.note-page h2,.thank-page h2,.final-page h2,.closing-page h2{font:500 clamp(45px,5vw,70px)/.9 "Cormorant Garamond";margin:8px 0 18px}.opening-copy h2 em,.story-intro h2 em,.wedding-intro h2 em,.note-page h2 em,.thank-page h2 em,.final-page h2 em,.closing-page h2 em{color:var(--blue-deep);font-style:italic}.opening-copy p:last-child,.copy{font-size:10px;line-height:1.8;max-width:340px}
-.chapter-number{font:italic 18px "Cormorant Garamond";margin:0 0 15px}.quote{font:italic 20px "Cormorant Garamond";line-height:1.4;color:#818c94}.flower-strip{width:200px;height:80px;margin:20px 0;overflow:hidden;opacity:.7;mix-blend-mode:multiply}.flower-strip img{width:100%;height:100%;object-fit:cover}.small-note{font-size:8px;letter-spacing:.08em}
-.photo-collage{background:#f7f3eb}.photo-main{width:54%;height:65%;padding:7px 7px 27px;background:white;box-shadow:0 12px 28px #4d596322;transform:rotate(-2deg);z-index:2}.photo-main img{width:100%;height:100%;object-fit:cover}.photo-small{position:absolute;width:30%;height:33%;padding:5px 5px 20px;background:white;box-shadow:0 8px 20px #4d596322}.photo-small img{width:100%;height:100%;object-fit:cover}.photo-one{left:7%;top:13%;transform:rotate(-6deg)}.photo-two{right:7%;bottom:13%;transform:rotate(6deg)}.photo-caption{font:italic 19px "Cormorant Garamond";margin-top:20px}
-.wedding-intro{background:linear-gradient(145deg,#fffdf8,#f6f2ea)}.details-page{display:flex;flex-direction:column;justify-content:center;padding:45px 55px}.detail{display:grid;grid-template-columns:42px 1fr;gap:15px;align-items:start;width:min(390px,100%);text-align:left}.detail-icon{width:36px;height:36px;border-radius:50%;background:var(--blue);color:white;display:grid;place-items:center}.detail-icon.peach{background:var(--peach)}.detail-label{font-size:7px;letter-spacing:.2em;margin:0}.detail h3{font:500 29px "Cormorant Garamond";margin:1px 0}.detail p:last-child{font-size:9px;line-height:1.5;margin:0}.rule{height:1px;width:75%;background:#c6a26955;margin:22px auto}.corner-floral{position:absolute;width:230px;height:170px;right:-75px;bottom:-50px;object-fit:cover;opacity:.23;mix-blend-mode:multiply;transform:rotate(-10deg)}
-.note-page{background:#f8f3eb}.note-page>p:not(.chapter-number){max-width:350px;font-size:10px;line-height:1.8}.save-date{margin:18px 0;padding:10px 22px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);font-size:8px;letter-spacing:.2em}.signature{font:400 39px "Great Vibes";color:var(--blue-deep);margin-top:12px}.note-floral{position:absolute;left:-35px;bottom:-25px;width:210px;height:170px;opacity:.22;mix-blend-mode:multiply;overflow:hidden}.note-floral img{width:100%;height:100%;object-fit:cover}
-.thank-page{background:#dbe7f1}.thank-photo{width:46%;height:43%;overflow:hidden;border:7px solid #fff;box-shadow:0 12px 25px #4d596322;margin-bottom:18px}.thank-photo img{width:100%;height:100%;object-fit:cover}.thank-page h2{margin:3px}.thank-page p{font-size:10px}
-.final-page{background:#fffaf4}.final-floral{position:absolute;inset:0;opacity:.18;mix-blend-mode:multiply}.final-floral img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}.final-page>*:not(.final-floral){position:relative;z-index:2}.final-page h2{font:400 clamp(60px,7vw,90px) "Great Vibes";margin:10px}.closing-page{background:#f4f0e8}.calendar{margin:20px 0;border:1px solid var(--gold);width:115px;height:125px;display:grid;place-items:center;align-content:center;font:500 58px "Cormorant Garamond";line-height:.75}.calendar span{font:500 8px Montserrat;letter-spacing:.18em}.closing-note{font-size:9px;line-height:1.7;max-width:260px}
-.navigation{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:18px}.navigation button{width:40px;height:40px;border-radius:50%;border:1px solid #c6a26988;background:#fff;color:var(--ink);cursor:pointer}.navigation button:disabled{opacity:.3}.dots{display:flex;gap:7px}.dot{width:5px;height:5px;border-radius:50%;background:#c5cdd2}.dot.active{background:var(--gold);transform:scale(1.4)}.swipe-note{font-size:8px;letter-spacing:.08em;opacity:.55;margin:10px 0 0}
-@media(max-width:760px){.site{padding:18px 10px}.topbar{margin-bottom:10px}.brand{font-size:20px}.book-shell{height:min(660px,72vh);min-height:500px}.cover-page,.opening-page,.story-intro,.wedding-intro,.note-page,.thank-page,.final-page,.closing-page,.details-page{padding:28px 20px}.cover-page h2{font-size:55px}.opening-copy h2,.story-intro h2,.wedding-intro h2,.note-page h2,.thank-page h2,.final-page h2,.closing-page h2{font-size:40px}.page-photo{width:85%;height:39%}.photo-main{width:60%;height:56%}.photo-small{width:34%;height:28%}.detail h3{font-size:24px}.corner-floral{width:170px;height:130px}.flower-top{width:180px;height:140px}.flower-bottom{width:170px;height:120px}}
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: fall 4s linear forwards;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
