@@ -1,14 +1,14 @@
-const data=[
-{left:`<div class="botanical tl"><img src="https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=1200"></div><div class="botanical br"><img src="https://images.pexels.com/photos/29146562/pexels-photo-29146562.jpeg?auto=compress&cs=tinysrgb&w=1200"></div><div class="cover-left"><div class="monogram">J <span>♡</span> K</div><p class="eyebrow">THE WEDDING OF</p><h2>Joyce <i>&amp;</i><br>Ken</h2><div class="rule"></div><p class="date-large">MAY 11, 2027</p><p class="subtitle">OUR STORY BEGINS HERE</p></div>`,right:`<div class="botanical tr"><img src="https://images.pexels.com/photos/36807081/pexels-photo-36807081.jpeg?auto=compress&cs=tinysrgb&w=1200"></div><div class="cover-right"><div class="intro"><p class="eyebrow">A LITTLE INVITATION</p><h3>A beautiful<br><em>chapter begins.</em></h3><p>With joy in our hearts, we invite you to celebrate our wedding and the beginning of our next chapter together.</p><div class="flower-line"><span>❀</span><span>✦</span><span>❀</span></div></div></div>`},
-{left:`<div class="botanical bl"><img src="https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=1200"></div><div class="story"><p class="chapter">Chapter One</p><h3>Our <em>story.</em></h3><p class="story-quote">“And now we get to write the next part.”</p><p class="copy">From ordinary days to a life we can't wait to build together, these are a few little pieces of the story that brought us here.</p><div class="flower-line"><span>❀</span><span>✦</span><span>❀</span></div></div>`,right:`<div class="photo-page"><div class="photo-frame"><img src="images/proposal.jpg"></div></div>`},
-{left:`<div class="details"><p class="chapter">Chapter Two</p><h3>The <em>wedding.</em></h3><div class="detail"><div class="detail-icon">✦</div><div><p class="detail-label">CEREMONY</p><strong>2:00 PM</strong><p>Parish of Immaculate Heart of Mary</p></div></div><div class="thin-rule"></div><div class="detail"><div class="detail-icon pink">♡</div><div><p class="detail-label">RECEPTION</p><strong>3:30 PM</strong><p>The Chandelier Events Place</p></div></div></div>`,right:`<div class="ring-photo"><div class="ring-card"><img src="images/ring.jpg"></div></div>`},
-{left:`<div class="note"><p class="chapter">Chapter Three</p><h3>A note <em>for you.</em></h3><p class="copy">Because you are important to us, we wanted you to be among the first to know. Please reserve this date for our wedding day.</p><div class="save">PLEASE SAVE THE DATE</div><p class="copy">Formal invitation and complete details to follow.</p><div class="signature">Joyce &amp; Ken</div></div>`,right:`<div class="thank"><div class="small-photo"><img src="images/couple.jpg"></div><p class="eyebrow">WITH LOVE</p><h3>We hope you'll<br>celebrate with us.</h3><p>It would mean so much to have you there as our next chapter begins.</p><div class="rule"></div></div>`},
-{left:`<div class="final"><div class="floral-corner"><img src="https://images.pexels.com/photos/4277883/pexels-photo-4277883.jpeg?auto=compress&cs=tinysrgb&w=1200"></div><p class="eyebrow">SEE YOU ON OUR BIG DAY</p><h3>Joyce <i>&amp;</i> Ken</h3><p class="date-large">MAY 11, 2027</p><p>Parish of Immaculate Heart of Mary<br>2:00 PM</p><div class="rule"></div><p>OUR STORY CONTINUES</p></div>`,right:`<div class="closing"><p class="eyebrow">UNTIL THEN</p><h3>Keep this <em>date close.</em></h3><div class="calendar"><strong>11</strong><span>MAY 2027</span></div><p>Formal invitation and complete details to follow.</p></div>`}
-];
-const spread=document.getElementById('spread'),dots=document.getElementById('dots');
-const labels=['Cover','Chapter One','Chapter Two','Chapter Three','The End'];let i=0,busy=false;
-data.forEach((_,n)=>{const d=document.createElement('span');d.className='dot';d.onclick=()=>go(n);dots.appendChild(d)});
-function paint(n){spread.innerHTML=`<div class="page left">${data[n].left}</div><div class="page right">${data[n].right}</div>`;spread.className='spread';requestAnimationFrame(()=>spread.classList.add('active'));[...dots.children].forEach((d,k)=>d.classList.toggle('active',k===n));}
-function go(n){if(busy||n===i||n<0||n>=data.length)return;busy=true;const direction=n>i?'next':'prev';spread.classList.remove('active');spread.classList.add(direction==='next'?'leaving-next':'leaving-prev');setTimeout(()=>{i=n;paint(i);setTimeout(()=>busy=false,580)},260)}
-const st=document.getElementById('site');document.getElementById('open').onclick=()=>{document.getElementById('welcome').classList.add('hide');st.classList.add('show');i=0;paint(0)};document.getElementById('next').onclick=()=>go(Math.min(i+1,data.length-1));document.getElementById('prev').onclick=()=>go(Math.max(i-1,0));
-let sx=null;st.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});st.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50){dx<0?go(Math.min(i+1,data.length-1)):go(Math.max(i-1,0))}sx=null},{passive:true});document.addEventListener('keydown',e=>{if(!st.classList.contains('show'))return;if(e.key==='ArrowRight')go(Math.min(i+1,data.length-1));if(e.key==='ArrowLeft')go(Math.max(i-1,0))});paint(0);
+const envelope=document.getElementById('openInvite');
+const invitation=document.getElementById('invitation');
+let opened=false;
+
+envelope.addEventListener('click',()=>{
+  if(opened) return;
+  opened=true;
+  envelope.classList.add('open');
+  setTimeout(()=> invitation.scrollIntoView({behavior:'smooth'}), 950);
+});
+
+document.getElementById('continue').addEventListener('click',()=>{
+  document.getElementById('details').scrollIntoView({behavior:'smooth'});
+});

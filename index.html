@@ -1,34 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Joyce & Ken — May 11, 2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joyce & Ken — Save the Date</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Great+Vibes&family=Italiana&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="ambient"></div>
-<section class="welcome" id="welcome">
-  <div class="welcome-card">
-    <div class="crest">J <span>♡</span> K</div>
-    <p class="eyebrow">A PRIVATE WEDDING INVITATION</p>
-    <h1>Joyce <i>&amp;</i> Ken</h1>
-    <div class="rule"><span>✦</span></div>
-    <p class="date">11 MAY 2027</p>
-    <button id="open">Open Invitation</button>
+
+<div class="hero" id="hero">
+  <div class="hero-copy">
+    <p>JOYCE & KEN</p>
+    <h1>A little something<br>for our favorite people.</h1>
+    <span>AN INTERACTIVE SAVE THE DATE</span>
   </div>
-</section>
-<main class="site" id="site">
-  <div class="book-wrap">
-    <div class="book" id="book">
-      <div class="book-spine"></div>
-      <div class="spread current" id="spread"></div>
-      
+
+  <div class="scene">
+    <div class="floral flor-left"></div>
+    <div class="floral flor-right"></div>
+
+    <button class="envelope-wrap" id="openInvite" aria-label="Open Joyce and Ken's invitation">
+      <div class="envelope">
+        <div class="env-back"></div>
+        <div class="letter">
+          <div class="letter-inner">
+            <small>TO OUR DEAREST</small>
+            <strong>Joyce <i>&amp;</i> Ken</strong>
+            <span>May 11, 2027</span>
+          </div>
+        </div>
+        <div class="env-front"></div>
+        <div class="flap"></div>
+        <div class="seal">J<span>&amp;</span>K</div>
+      </div>
+      <div class="open-label">tap to open</div>
+    </button>
+  </div>
+</div>
+
+<main class="invitation" id="invitation">
+
+  <section class="paper save-date">
+    <div class="botanical botanical-a"></div>
+    <div class="botanical botanical-b"></div>
+    <div class="monogram">J <span>&amp;</span> K</div>
+    <p class="eyebrow">WE'RE GETTING MARRIED</p>
+    <h2>Joyce <em>&amp;</em> Ken</h2>
+    <div class="rule">✦</div>
+    <p class="date">MAY 11, 2027</p>
+    <p class="save">PLEASE SAVE THE DATE</p>
+    <button class="continue" id="continue">Open the invitation ↓</button>
+  </section>
+
+  <section class="paper details" id="details">
+    <div class="details-grid">
+      <div class="details-copy">
+        <p class="eyebrow">THE WEDDING DAY</p>
+        <h3>Our next chapter<br><em>begins here.</em></h3>
+        <p class="intro">With joy in our hearts, we invite you to reserve this special day and celebrate the beginning of our forever.</p>
+
+        <div class="event">
+          <span class="icon">✝</span>
+          <div>
+            <small>THE CEREMONY</small>
+            <b>2:00 PM</b>
+            <p>Parish of Immaculate Heart of Mary</p>
+          </div>
+        </div>
+
+        <div class="event">
+          <span class="icon">✦</span>
+          <div>
+            <small>THE CELEBRATION</small>
+            <b>3:30 PM</b>
+            <p>The Chandelier Events Place</p>
+          </div>
+        </div>
+
+        <p class="note">Formal invitation and complete wedding details will follow.</p>
+      </div>
+
+      <div class="ring-feature">
+        <div class="ring-frame">
+          <img src="images/ring.jpg" alt="Joyce's engagement ring">
+        </div>
+        <p class="caption">The beginning of our forever. <span>♡</span></p>
+      </div>
     </div>
-  </div>
-  <div class="nav"><button id="prev">‹</button><div class="dots" id="dots"></div><button id="next">›</button></div>
-  <p class="hint">Use the arrows or swipe to turn the pages</p>
+  </section>
+
+  <section class="paper story">
+    <div class="story-photo">
+      <img src="images/proposal.jpg" alt="Joyce and Ken's proposal">
+    </div>
+    <div class="story-copy">
+      <p class="eyebrow">OUR STORY</p>
+      <h3>One beautiful <em>yes.</em></h3>
+      <p>From a question asked with love to a promise we now get to make before God and the people we love.</p>
+      <div class="script">And now, forever.</div>
+    </div>
+  </section>
+
+  <section class="paper final">
+    <div class="final-floral"></div>
+    <div class="final-content">
+      <div class="monogram">J <span>&amp;</span> K</div>
+      <p class="eyebrow">PLEASE RESERVE OUR DATE</p>
+      <h2>May 11,<br><em>2027</em></h2>
+      <p>We would love to celebrate with you.</p>
+      <div class="rule">✦</div>
+      <p class="signature">Joyce &amp; Ken</p>
+    </div>
+  </section>
+
 </main>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
