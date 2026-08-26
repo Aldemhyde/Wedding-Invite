@@ -1,33 +1,34 @@
-# Joyce & Ken — Whimsical Spring Invitation (V2)
+# Joyce & Ken — Whimsical Spring Wedding Invitation
 
-## Folder structure
-
-```text
-index.html
-style.css
-script.js
-images/
-  proposal.jpg
-  ring.jpg
-  couple.jpg
-```
+## Files
+- `index.html`
+- `style.css`
+- `script.js`
+- `images/`
 
 ## Changes in this version
-
-- Envelope now says **“You are invited!”**
-- Clicking the envelope opens it
-- Clicking it again closes it
-- Removed the “interactive save the date” wording
-- “Open the invitation” is now a working button that smoothly scrolls to the wedding details
-- Returned to separate **HTML + CSS + JavaScript** files
-- Background botanical treatment is softer and closer to a whimsical spring palette:
-  powder blue, blush, peach, sage, lilac and ivory
-- Reduced the yellow/gold dominance to subtle champagne accents only
+- Envelope now says **YOU ARE INVITED!**
+- Envelope can be opened **and closed again** by clicking/tapping it.
+- Removed the "interactive save the date" wording.
+- "OPEN THE INVITATION" now scrolls to the actual invitation.
+- "VIEW OUR INVITATION" button also works.
+- Flowers were shifted toward a **pastel blue, blush, peach, sage and ivory whimsical spring palette**.
+- Separate HTML, CSS and JavaScript files are restored for easier editing.
 
 ## GitHub Pages
+Upload the contents of this folder directly into the repository root:
 
-Upload `index.html`, `style.css`, `script.js`, and the entire `images` folder directly to the root of your GitHub repository.
+    index.html
+    style.css
+    script.js
+    images/
 
-Then:
+Then enable GitHub Pages from:
+Settings → Pages → Deploy from a branch → main → /(root)
 
-**Settings → Pages → Deploy from a branch → main → /(root)**
+
+## Latest refinement
+- Rebalanced the envelope proportions so it feels more like elegant wedding stationery.
+- Replaced the ambiguous “You are invited!” wording on the envelope with “A Special Invitation”.
+- Clarified that the invitation is **from Joyce & Ken**.
+- Added a dedicated VIP page asking the recipient to become Joyce & Ken’s **Ninong / Ninang**.

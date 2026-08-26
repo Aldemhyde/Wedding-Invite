@@ -1,26 +1,19 @@
 const envelopeButton = document.getElementById("envelopeButton");
-const tapLabel = document.getElementById("tapLabel");
+const envelopeInstruction = document.getElementById("envelopeInstruction");
+const continueButton = document.getElementById("continueButton");
 const openInvitation = document.getElementById("openInvitation");
-const details = document.getElementById("details");
+const invitation = document.getElementById("invitation");
 
-let isOpen = false;
-
-function updateEnvelope() {
-  envelopeButton.classList.toggle("open", isOpen);
+function toggleEnvelope() {
+  const isOpen = envelopeButton.classList.toggle("open");
   envelopeButton.setAttribute("aria-expanded", String(isOpen));
-  tapLabel.textContent = isOpen ? "Tap again to close" : "Tap to open";
+  envelopeInstruction.textContent = isOpen ? "Tap to close" : "Tap to open";
 }
 
-envelopeButton.addEventListener("click", () => {
-  isOpen = !isOpen;
-  updateEnvelope();
-});
+function goToInvitation() {
+  invitation.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
-openInvitation.addEventListener("click", () => {
-  details.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-});
-
-updateEnvelope();
+envelopeButton.addEventListener("click", toggleEnvelope);
+continueButton.addEventListener("click", goToInvitation);
+openInvitation.addEventListener("click", goToInvitation);
