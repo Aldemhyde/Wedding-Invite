@@ -10,3 +10,6 @@ This version is inspired by the reference style: an open paper book with a layer
 
 ### Publish on GitHub Pages
 Upload `index.html`, `style.css`, and `script.js` to the root of your `main` branch, then use Settings → Pages → Deploy from a branch → main → /(root).
+
+## Photos
+Three photos are used to keep the invitation elegant and uncluttered: proposal moment, candid dinner, and couple portrait.
