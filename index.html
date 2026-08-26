@@ -1,144 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#d9e5f2">
-<title>Joyce & Ken | May 11, 2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dbe7f2">
+  <title>Joyce & Ken | Our Wedding Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="magic-dust" id="dust"></div>
 
-<section class="landing" id="landing">
-  <div class="landing-card">
-    <div class="botanical-mini">❦</div>
-    <p class="kicker">THE WEDDING OF</p>
-    <h1>Joyce <em>&amp;</em> Ken</h1>
-    <div class="date-line">MAY 11, 2027</div>
-    <p class="landing-note">A little invitation to our next chapter.</p>
-    <button id="openBtn">Open invitation <span>♡</span></button>
+<div class="ambient"></div>
+
+<section class="welcome" id="welcome">
+  <div class="welcome-card">
+    <p class="eyebrow">OUR WEDDING STORY</p>
+    <h1>Joyce <span>&amp;</span> Ken</h1>
+    <div class="gold-line">♡</div>
+    <p class="welcome-date">MAY 11, 2027</p>
+    <p class="welcome-copy">A little story about the day<br>our next chapter begins.</p>
+    <button id="begin">Begin our story</button>
   </div>
 </section>
 
-<main class="app" id="app">
-  <div class="book" id="book">
-    <div class="cover" id="cover">
-      <div class="cover-face">
-        <div class="cover-frame">
-          <div class="cover-floral floral-a">
-            <img src="https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+<main class="site" id="site">
+  <header class="topbar">
+    <div class="brand">Joyce <span>&amp;</span> Ken</div>
+    <div class="chapter" id="chapter">Cover</div>
+    <div class="counter" id="counter">01 / 05</div>
+  </header>
+
+  <section class="book-shell">
+    <div class="book" id="book">
+
+      <article class="spread active" data-index="0">
+        <div class="page cover-page">
+          <div class="flower-photo flower-top">
+            <img src="https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="">
           </div>
-          <div class="cover-floral floral-b">
-            <img src="https://images.pexels.com/photos/5344925/pexels-photo-5344925.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          <div class="cover-content">
+            <p class="eyebrow">THE WEDDING OF</p>
+            <h2>Joyce <span>&amp;</span><br>Ken</h2>
+            <div class="gold-line">♡</div>
+            <p class="date-large">MAY 11, 2027</p>
+            <p class="cover-small">A NEW CHAPTER BEGINS</p>
           </div>
-          <p class="kicker">OUR WEDDING STORY</p>
-          <h2>Joyce <em>&amp;</em><br>Ken</h2>
-          <div class="gold-rule">✦</div>
-          <p class="cover-date">11 · 05 · 2027</p>
-          <p class="cover-place">PHILIPPINES</p>
+          <div class="flower-photo flower-bottom">
+            <img src="https://images.pexels.com/photos/5344925/pexels-photo-5344925.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="">
+          </div>
         </div>
-      </div>
-      <div class="cover-back"></div>
+        <div class="page opening-page">
+          <div class="page-photo">
+            <img src="https://images.pexels.com/photos/16686868/pexels-photo-16686868.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="">
+          </div>
+          <div class="opening-copy">
+            <p class="eyebrow">A BEAUTIFUL CHAPTER</p>
+            <h2>Begins<br><em>here.</em></h2>
+            <p>With joy in our hearts, we invite you to celebrate our wedding and the beginning of our next chapter together.</p>
+            <div class="gold-line">✦</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spread" data-index="1">
+        <div class="page story-intro">
+          <p class="chapter-number">Chapter One</p>
+          <h2>Our <em>Story</em></h2>
+          <p class="quote">Every love story is beautiful,<br>but ours is our favorite.</p>
+          <div class="flower-strip">
+            <img src="https://images.pexels.com/photos/15183009/pexels-photo-15183009.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+          <p class="small-note">And this is where the next chapter begins.</p>
+        </div>
+        <div class="page photo-collage">
+          <div class="photo-main"><img src="images/proposal.jpg" alt="Joyce and Ken"></div>
+          <div class="photo-small photo-one"><img src="images/story.jpg" alt="Joyce and Ken"></div>
+          <div class="photo-small photo-two"><img src="images/portrait.jpg" alt="Joyce and Ken"></div>
+          <p class="photo-caption">The beginning of forever.</p>
+        </div>
+      </article>
+
+      <article class="spread" data-index="2">
+        <div class="page wedding-intro">
+          <p class="chapter-number">Chapter Two</p>
+          <h2>The <em>Wedding</em></h2>
+          <p class="quote">Please join us as we celebrate<br>our wedding day.</p>
+          <p class="date-large">MAY 11, 2027</p>
+          <div class="flower-strip">
+            <img src="https://images.pexels.com/photos/28759039/pexels-photo-28759039.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+        </div>
+        <div class="page details-page">
+          <div class="detail">
+            <div class="detail-icon">✦</div>
+            <div>
+              <p class="detail-label">CEREMONY</p>
+              <h3>2:00 PM</h3>
+              <p>Parish of Immaculate Heart of Mary</p>
+            </div>
+          </div>
+          <div class="rule"></div>
+          <div class="detail">
+            <div class="detail-icon peach">♡</div>
+            <div>
+              <p class="detail-label">RECEPTION</p>
+              <h3>3:30 PM</h3>
+              <p>The Chandelier Events Place</p>
+            </div>
+          </div>
+          <img class="corner-floral" src="https://images.pexels.com/photos/19590355/pexels-photo-19590355.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="">
+        </div>
+      </article>
+
+      <article class="spread" data-index="3">
+        <div class="page note-page">
+          <p class="chapter-number">Chapter Three</p>
+          <h2>A Note<br><em>for You</em></h2>
+          <p>Before the formal invitation arrives, we wanted you to be among the first to know.</p>
+          <div class="save-date">PLEASE SAVE THE DATE</div>
+          <p>We hope you'll be there as we begin this beautiful new chapter together.</p>
+          <div class="signature">Joyce &amp; Ken</div>
+          <div class="note-floral">
+            <img src="https://images.pexels.com/photos/36314592/pexels-photo-36314592.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+        </div>
+        <div class="page thank-page">
+          <div class="thank-photo"><img src="images/portrait.jpg" alt="Joyce and Ken"></div>
+          <p class="eyebrow">WITH LOVE</p>
+          <h2>Thank <em>You</em></h2>
+          <p>We wouldn't want to celebrate this day without you.</p>
+          <div class="gold-line">♡</div>
+        </div>
+      </article>
+
+      <article class="spread" data-index="4">
+        <div class="page final-page">
+          <div class="final-floral">
+            <img src="https://images.pexels.com/photos/8669230/pexels-photo-8669230.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="">
+          </div>
+          <p class="eyebrow">SEE YOU ON OUR BIG DAY</p>
+          <h2>Joyce <span>&amp;</span> Ken</h2>
+          <p class="date-large">MAY 11, 2027</p>
+          <p>Parish of Immaculate Heart of Mary<br>2:00 PM</p>
+          <div class="gold-line">✦</div>
+          <p class="cover-small">OUR STORY CONTINUES</p>
+        </div>
+        <div class="page closing-page">
+          <p class="eyebrow">UNTIL THEN</p>
+          <h2>Keep this<br><em>date close.</em></h2>
+          <div class="calendar">11<br><span>MAY 2027</span></div>
+          <p class="closing-note">Formal invitation and complete details to follow.</p>
+          <button id="restart">Read from the beginning ↻</button>
+        </div>
+      </article>
+
     </div>
+  </section>
 
-    <section class="spread spread-one">
-      <div class="paper left">
-        <div class="paper-content">
-          <p class="kicker">A NEW CHAPTER</p>
-          <h3>And so the story<br><em>continues.</em></h3>
-          <p class="copy">To the people who have been part of our journey, we hope you'll be part of the day we begin our next chapter together.</p>
-          <div class="floral-rule">❧ ❀ ❧</div>
-          <p class="script">Please save our date.</p>
-          <div class="date-box"><small>TUESDAY</small><strong>MAY 11</strong><small>2027</small></div>
-        </div>
-        <img class="corner-flower" src="https://images.pexels.com/photos/13524629/pexels-photo-13524629.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
-      </div>
-
-      <div class="paper right">
-        <div class="garland">
-          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="chapel-art">
-          <div class="chapel-roof"></div>
-          <div class="chapel-body">
-            <div class="chapel-window"></div>
-            <div class="chapel-door"></div>
-            <div class="cross">✝</div>
-          </div>
-        </div>
-        <div class="right-copy">
-          <p class="kicker">WITH JOY IN OUR HEARTS</p>
-          <h3>We invite you<br><em>to celebrate.</em></h3>
-          <p class="copy small">our wedding day</p>
-          <div class="hero-date">MAY 11, 2027</div>
-        </div>
-        <div class="flower-bank">
-          <img src="https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
-          <img src="https://images.pexels.com/photos/5344925/pexels-photo-5344925.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
-        </div>
-      </div>
-    </section>
-
-    <section class="spread spread-two">
-      <div class="paper left photo-page">
-        <div class="photo-frame">
-          <img src="images/proposal.jpg" alt="Joyce and Ken">
-        </div>
-        <p class="kicker">THE BEGINNING</p>
-        <h3>One beautiful<br><em>yes.</em></h3>
-        <p class="caption">And now, we're writing the next part of our story together.</p>
-        <div class="small-floral">❀</div>
-      </div>
-      <div class="paper right story-page">
-        <p class="kicker">FROM THIS DAY FORWARD</p>
-        <h3>From this moment<br><em>to forever.</em></h3>
-        <p class="copy">A few little pieces of our story, before we celebrate the next chapter with you.</p>
-        <div class="mini-photos">
-          <figure><img src="images/story.jpg" alt="Joyce and Ken"><figcaption>together</figcaption></figure>
-          <figure><img src="images/portrait.jpg" alt="Joyce and Ken"><figcaption>always</figcaption></figure>
-        </div>
-        <div class="floral-rule">❧ ❀ ❧</div>
-      </div>
-    </section>
-
-    <section class="spread spread-three">
-      <div class="paper left details-page">
-        <p class="kicker">THE DAY</p>
-        <h3>When we say<br><em>“I do”</em></h3>
-        <div class="detail-card">
-          <span class="detail-icon">✝</span>
-          <div><small>THE CEREMONY</small><strong>2:00 PM</strong><p>Parish of Immaculate Heart of Mary</p></div>
-        </div>
-        <div class="divider"></div>
-        <div class="detail-card">
-          <span class="detail-icon peach">✦</span>
-          <div><small>THE RECEPTION</small><strong>3:30 PM</strong><p>The Chandelier Events Place</p></div>
-        </div>
-        <p class="formal">Formal invitation and complete details to follow.</p>
-      </div>
-      <div class="paper right note-page">
-        <div class="note-floral">❦</div>
-        <p class="kicker">A SPECIAL NOTE FOR YOU</p>
-        <h3>Please save<br><em>our date.</em></h3>
-        <p class="copy">Before the formal invitation arrives, we wanted you to be among the first to know. We hope you'll be there as we begin this beautiful new chapter together.</p>
-        <p class="script">We can't wait to celebrate with you.</p>
-        <div class="signature">Joyce &amp; Ken</div>
-        <div class="note-flower"><img src="https://images.pexels.com/photos/13524629/pexels-photo-13524629.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div>
-      </div>
-    </section>
-  </div>
-
-  <div class="controls">
+  <nav class="navigation" aria-label="Story navigation">
     <button id="prev" aria-label="Previous page">←</button>
-    <span id="label">COVER</span>
+    <div class="dots" id="dots"></div>
     <button id="next" aria-label="Next page">→</button>
-  </div>
-  <p class="hint">Swipe or tap the arrows to turn the pages</p>
+  </nav>
+  <p class="swipe-note">Swipe or use the arrows to turn the pages</p>
 </main>
+
 <script src="script.js"></script>
 </body>
 </html>
