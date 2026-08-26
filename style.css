@@ -1,0 +1,704 @@
+/* Joyce & Ken — Whimsical Spring Invitation */
+
+:root{
+  --ink:#4c5965;
+  --blue:#dceaf3;
+  --blue-deep:#92b0c9;
+  --blush:#e9c1c9;
+  --peach:#f1cfb5;
+  --sage:#d5ddc8;
+  --lilac:#e2d8ec;
+  --ivory:#fbf8f2;
+  --paper:#fffdfa;
+  --gold:#b99a6d;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#edf0ef;
+  color:var(--ink);
+  font-family:"Montserrat",sans-serif;
+  overflow-x:hidden;
+}
+
+button{font:inherit}
+
+/* =========================
+   HERO / ENVELOPE
+========================= */
+
+.hero{
+  min-height:100svh;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  align-items:center;
+  gap:4vw;
+  padding:6vw 8vw;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(220,234,243,.9),transparent 29%),
+    radial-gradient(circle at 86% 80%,rgba(233,193,201,.6),transparent 28%),
+    linear-gradient(135deg,#eef5f7 0%,#f8f5ef 52%,#f3e9f0 100%);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(105deg,rgba(255,255,255,.32),transparent 40%,rgba(255,255,255,.28));
+  pointer-events:none;
+}
+
+.hero-copy{
+  position:relative;
+  z-index:3;
+  max-width:520px;
+}
+
+.kicker,.eyebrow{
+  margin:0 0 17px;
+  font-size:9px;
+  letter-spacing:.28em;
+}
+
+.hero-copy h1{
+  margin:0;
+  font:500 clamp(52px,6vw,86px)/.93 "Cormorant Garamond",serif;
+}
+
+.hero-copy h1 em{
+  font-family:"Great Vibes",cursive;
+  font-size:1.12em;
+  font-weight:400;
+  color:var(--blue-deep);
+}
+
+.hero-note{
+  margin:24px 0 0;
+  font:italic 21px/1.4 "Cormorant Garamond",serif;
+  color:#76848e;
+}
+
+/* Consistent pastel botanical imagery */
+.hero-botanical,
+.corner-flower,
+.story-flower{
+  position:absolute;
+  pointer-events:none;
+  background-image:url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85");
+  background-size:cover;
+  background-position:center;
+  mix-blend-mode:multiply;
+  filter:saturate(.72) hue-rotate(12deg);
+}
+
+.botanical-left{
+  width:330px;
+  height:330px;
+  left:-130px;
+  bottom:-120px;
+  border-radius:50%;
+  opacity:.28;
+}
+
+.botanical-right{
+  width:350px;
+  height:350px;
+  right:-150px;
+  top:-145px;
+  border-radius:50%;
+  opacity:.23;
+  transform:rotate(130deg);
+}
+
+.envelope-stage{
+  position:relative;
+  z-index:3;
+  min-height:560px;
+  display:grid;
+  place-items:center;
+}
+
+.envelope-button{
+  width:min(620px,98%);
+  height:445px;
+  position:relative;
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  perspective:1300px;
+}
+
+.envelope{
+  position:absolute;
+  left:50%;
+  bottom:38px;
+  width:100%;
+  height:335px;
+  transform:translateX(-50%);
+  filter:drop-shadow(0 28px 25px rgba(59,69,77,.18));
+}
+
+.env-back{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(145deg,#dfbcc2,#d7aeb6);
+}
+
+.letter{
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:6%;
+  height:97%;
+  z-index:2;
+  padding:15px;
+  background:var(--paper);
+  box-shadow:0 6px 18px rgba(56,65,73,.15);
+  transform:translateY(68px);
+  transition:transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.letter-card{
+  height:100%;
+  border:1px solid rgba(185,154,109,.48);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.letter-kicker{
+  margin:0;
+  font-size:8px;
+  letter-spacing:.25em;
+}
+
+.letter-card h2{
+  margin:14px 0 12px;
+  font:500 48px/.9 "Cormorant Garamond",serif;
+}
+
+.letter-card h2 span{
+  font-family:"Great Vibes",cursive;
+  font-size:1.25em;
+  font-weight:400;
+  color:var(--blue-deep);
+}
+
+.mini-divider{
+  color:var(--gold);
+  margin:2px 0 10px;
+}
+
+.letter-date{
+  margin:0;
+  font-size:9px;
+  letter-spacing:.22em;
+}
+
+.env-front{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:82%;
+  z-index:4;
+  background:linear-gradient(145deg,#e9c8ce,#dcaeb6);
+  clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);
+}
+
+.env-flap{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:58%;
+  z-index:7;
+  transform-origin:top center;
+  transition:transform .9s cubic-bezier(.2,.8,.2,1);
+  background:#efcfd2;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+}
+
+.seal{
+  position:absolute;
+  left:50%;
+  top:47%;
+  z-index:8;
+  width:68px;
+  height:68px;
+  transform:translate(-50%,-50%);
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--blue-deep);
+  border:5px solid #e4edf3;
+  color:#fff;
+  font:400 25px "Great Vibes",cursive;
+  box-shadow:0 7px 16px rgba(72,89,102,.28);
+  transition:opacity .25s ease;
+}
+
+.seal span{font-size:14px}
+
+.tap-label{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align:center;
+  color:#71808b;
+  font-size:8px;
+  letter-spacing:.23em;
+  text-transform:uppercase;
+}
+
+.envelope-button.open .env-flap{
+  transform:rotateX(180deg);
+  z-index:1;
+}
+
+.envelope-button.open .letter{
+  transform:translateY(-145px);
+}
+
+.envelope-button.open .seal{
+  opacity:0;
+}
+
+/* =========================
+   INVITATION SHEETS
+========================= */
+
+.invitation{
+  display:block;
+}
+
+.sheet{
+  min-height:100svh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 8vw;
+}
+
+.sheet-content,
+.details-grid,
+.story-grid{
+  width:min(1080px,100%);
+  position:relative;
+  z-index:2;
+}
+
+.centered{text-align:center}
+
+.welcome-sheet{
+  background:linear-gradient(145deg,#fffdfa,#f7f3ec);
+}
+
+.welcome-sheet::before,
+.final-sheet::before{
+  content:"";
+  position:absolute;
+  inset:26px;
+  border:1px solid rgba(185,154,109,.38);
+  pointer-events:none;
+}
+
+.corner-flower{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  opacity:.16;
+}
+
+.flower-a{
+  left:-170px;
+  bottom:-170px;
+  transform:rotate(-25deg);
+}
+
+.flower-b{
+  right:-175px;
+  top:-170px;
+  transform:rotate(135deg);
+}
+
+.monogram{
+  font:400 58px "Great Vibes",cursive;
+  color:var(--ink);
+}
+
+.monogram span{
+  font-size:.6em;
+  color:var(--blush);
+}
+
+.names{
+  margin:22px 0;
+  font:500 clamp(76px,11vw,145px)/.78 "Great Vibes",cursive;
+}
+
+.names span{color:var(--blue-deep)}
+
+.divider{
+  margin:22px 0;
+  color:var(--gold);
+  font-size:18px;
+}
+
+.welcome-copy{
+  max-width:440px;
+  margin:0 auto;
+  font:italic 22px/1.45 "Cormorant Garamond",serif;
+  color:#73808a;
+}
+
+.date{
+  margin:28px 0 0;
+  font-size:11px;
+  letter-spacing:.27em;
+}
+
+.open-invitation{
+  margin-top:38px;
+  padding:10px 2px;
+  border:0;
+  border-bottom:1px solid var(--gold);
+  background:transparent;
+  color:var(--ink);
+  font-size:9px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.open-invitation span{margin-left:6px}
+
+/* DETAILS */
+
+.details-sheet{
+  background:
+    radial-gradient(circle at 10% 85%,rgba(213,221,200,.55),transparent 26%),
+    linear-gradient(135deg,#edf3f6,#f7f3ed);
+}
+
+.details-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:8vw;
+  align-items:center;
+}
+
+.details-copy h3,
+.story-copy h3{
+  margin:0 0 22px;
+  font:500 clamp(50px,6vw,80px)/.9 "Cormorant Garamond",serif;
+}
+
+.details-copy h3 em,
+.story-copy h3 em{
+  font-family:"Great Vibes",cursive;
+  font-weight:400;
+  color:var(--blue-deep);
+}
+
+.intro{
+  max-width:470px;
+  font-size:11px;
+  line-height:1.9;
+}
+
+.event{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:16px;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid rgba(185,154,109,.34);
+}
+
+.event-symbol{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--blue-deep);
+  color:#fff;
+}
+
+.event-label{
+  margin:0 0 4px;
+  font-size:8px;
+  letter-spacing:.2em;
+}
+
+.event strong{
+  display:block;
+  margin-bottom:3px;
+  font:500 31px "Cormorant Garamond",serif;
+}
+
+.event p:last-child{
+  margin:0;
+  font-size:10px;
+  line-height:1.5;
+}
+
+.small-note{
+  margin-top:28px;
+  font-size:8px;
+  letter-spacing:.04em;
+  color:#7d8991;
+}
+
+.ring-card{
+  width:min(400px,100%);
+  margin:auto;
+  padding:13px 13px 42px;
+  background:#fff;
+  box-shadow:0 24px 55px rgba(59,69,77,.15);
+  transform:rotate(2deg);
+}
+
+.ring-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+
+.ring-feature>p{
+  margin-top:18px;
+  text-align:center;
+  font:italic 21px "Cormorant Garamond",serif;
+}
+
+/* STORY */
+
+.story-sheet{
+  background:linear-gradient(135deg,#dce8f0,#e8e0ee);
+}
+
+.story-flower{
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  opacity:.12;
+}
+
+.story-flower-left{
+  left:-175px;
+  bottom:-175px;
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:8vw;
+  align-items:center;
+}
+
+.photo-card{
+  width:min(440px,100%);
+  padding:11px 11px 42px;
+  background:#fff;
+  box-shadow:0 24px 55px rgba(59,69,77,.16);
+  transform:rotate(-2deg);
+}
+
+.photo-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+
+.story-copy p{
+  max-width:420px;
+  font-size:12px;
+  line-height:1.9;
+}
+
+.script-line{
+  margin-top:24px;
+  font:400 46px "Great Vibes",cursive;
+  color:var(--blue-deep);
+}
+
+/* FINAL */
+
+.final-sheet{
+  background:
+    radial-gradient(circle at 15% 18%,rgba(220,234,243,.75),transparent 27%),
+    radial-gradient(circle at 85% 82%,rgba(233,193,201,.55),transparent 26%),
+    linear-gradient(135deg,#fbf7f0,#e9f0f4);
+}
+
+.final-flower-left{
+  left:-165px;
+  bottom:-165px;
+  transform:rotate(-20deg);
+}
+
+.final-flower-right{
+  right:-165px;
+  top:-165px;
+  transform:rotate(145deg);
+}
+
+.final-date{
+  margin:22px 0;
+  font:500 clamp(80px,11vw,145px)/.78 "Great Vibes",cursive;
+}
+
+.final-date em{
+  font-style:normal;
+  color:var(--blue-deep);
+}
+
+.final-copy{
+  margin:0 auto;
+  font:italic 21px/1.45 "Cormorant Garamond",serif;
+}
+
+.final-details{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  margin-top:24px;
+}
+
+.final-details p{
+  margin:0;
+  font-size:10px;
+  line-height:1.8;
+}
+
+.final-details strong{
+  font-weight:500;
+}
+
+.signature{
+  margin-top:30px;
+  font:400 50px "Great Vibes",cursive;
+  color:var(--blue-deep);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:760px){
+
+  .hero{
+    min-height:auto;
+    grid-template-columns:1fr;
+    padding:55px 20px 35px;
+    gap:0;
+  }
+
+  .hero-copy{
+    padding:0 8px;
+    text-align:center;
+  }
+
+  .hero-copy h1{
+    font-size:54px;
+  }
+
+  .envelope-stage{
+    min-height:460px;
+  }
+
+  .envelope-button{
+    width:100%;
+    height:395px;
+  }
+
+  .envelope{
+    height:248px;
+    bottom:40px;
+  }
+
+  .letter-card h2{
+    font-size:38px;
+  }
+
+  .envelope-button.open .letter{
+    transform:translateY(-125px);
+  }
+
+  .sheet{
+    min-height:100svh;
+    padding:78px 25px;
+  }
+
+  .welcome-sheet::before,
+  .final-sheet::before{
+    inset:14px;
+  }
+
+  .corner-flower{
+    width:260px;
+    height:260px;
+  }
+
+  .details-grid,
+  .story-grid{
+    grid-template-columns:1fr;
+    gap:48px;
+  }
+
+  .details-copy{
+    text-align:center;
+  }
+
+  .intro{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .event{
+    text-align:left;
+  }
+
+  .ring-card{
+    width:min(360px,100%);
+  }
+
+  .story-copy{
+    text-align:center;
+  }
+
+  .story-copy p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .photo-card{
+    width:min(390px,100%);
+    margin:auto;
+  }
+
+  .names,
+  .final-date{
+    font-size:88px;
+  }
+
+  .final-details{
+    flex-direction:column;
+    gap:14px;
+  }
+}

@@ -1,306 +1,179 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#dbe8f2">
-<title>Joyce & Ken | Save the Date</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#dceaf3">
+  <title>Joyce & Ken | You Are Invited</title>
 
-<style>
-:root{
-  --ink:#4d5862;
-  --blue:#d9e8f3;
-  --blue2:#a9c3d8;
-  --blush:#e7bcc0;
-  --peach:#f0c8a8;
-  --sage:#ccd6c4;
-  --ivory:#fbf8f2;
-  --paper:#fffdfa;
-  --gold:#b8945f;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#edf0ef;color:var(--ink);font-family:Montserrat,sans-serif;overflow-x:hidden}
-button{font-family:inherit}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
-/* INTRO */
-#intro{
-  min-height:100svh; display:grid; place-items:center; position:relative; overflow:hidden;
-  background:linear-gradient(135deg,#dce9f3 0%,#f5f3ee 48%,#f4e8df 100%);
-}
-#intro::before,#intro::after{
-  content:"";position:absolute;width:46vw;height:46vw;border-radius:50%;
-  filter:blur(2px);opacity:.55
-}
-#intro::before{background:#d0dec7;left:-20vw;bottom:-24vw}
-#intro::after{background:#edc5c6;right:-22vw;top:-24vw}
-.intro-wrap{position:relative;z-index:2;width:min(1120px,94vw);display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center}
-.intro-copy{padding:35px}
-.kicker{font-size:9px;letter-spacing:.28em;margin:0 0 18px}
-.intro-copy h1{font:500 clamp(48px,6vw,82px)/.95 "Cormorant Garamond",serif;margin:0}
-.intro-copy h1 em{font-family:"Great Vibes",cursive;font-size:1.18em;font-weight:400;color:var(--blue2)}
-.intro-copy p:last-child{font:italic 20px/1.4 "Cormorant Garamond",serif;margin-top:24px;color:#75818a}
-
-/* ENVELOPE */
-.stage{height:570px;position:relative;display:grid;place-items:center}
-.stage::before{
-  content:"";position:absolute;inset:8% 5%;border-radius:50%;
-  background:radial-gradient(circle,#fff9 0 18%,transparent 52%);
-}
-.envelope-button{width:min(610px,96%);height:430px;border:0;background:transparent;cursor:pointer;position:relative;padding:0;perspective:1300px}
-.envelope{position:absolute;left:50%;bottom:35px;transform:translateX(-50%);width:100%;height:330px;filter:drop-shadow(0 28px 24px rgba(59,68,75,.18))}
-.back{position:absolute;inset:0;background:linear-gradient(145deg,#dcb6b9,#d6a7ab)}
-.letter{
-  position:absolute;left:7%;right:7%;bottom:6%;height:96%;z-index:2;
-  background:var(--paper);padding:16px;box-shadow:0 5px 16px rgba(54,64,70,.16);
-  transform:translateY(68px);transition:transform 1.05s cubic-bezier(.18,.8,.22,1)
-}
-.letter-card{
-  height:100%;border:1px solid rgba(184,148,95,.45);
-  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center
-}
-.letter-card small{font-size:8px;letter-spacing:.25em}
-.letter-card strong{font:400 58px/1 "Great Vibes",cursive;margin:16px 0 12px;color:var(--ink)}
-.letter-card strong span{color:var(--blush)}
-.letter-card b{font:500 9px Montserrat,sans-serif;letter-spacing:.23em;font-weight:500}
-.front{
-  position:absolute;left:0;right:0;bottom:0;height:82%;z-index:4;
-  background:linear-gradient(145deg,#e6c2c3,#d9adb0);
-  clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%)
-}
-.flap{
-  position:absolute;left:0;top:0;width:100%;height:58%;z-index:7;
-  transform-origin:top center;transition:transform .95s cubic-bezier(.18,.8,.22,1);
-  background:#ebc9ca;clip-path:polygon(0 0,100% 0,50% 100%)
-}
-.seal{
-  position:absolute;left:50%;top:47%;z-index:8;transform:translate(-50%,-50%);
-  width:68px;height:68px;border-radius:50%;display:grid;place-items:center;
-  background:var(--blue2);border:5px solid #dfeaf1;color:white;
-  font:400 25px "Great Vibes",cursive;box-shadow:0 6px 14px #52616d55;
-  transition:opacity .3s
-}
-.seal span{font-size:14px}
-.tap{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:8px;text-transform:uppercase;letter-spacing:.25em;color:#72818c}
-.envelope-button.open .flap{transform:rotateX(180deg);z-index:1}
-.envelope-button.open .letter{transform:translateY(-145px)}
-.envelope-button.open .seal{opacity:0}
-
-/* INVITATION */
-#invitation{display:none}
-#invitation.show{display:block;animation:reveal .8s ease both}
-@keyframes reveal{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-.sheet{min-height:100svh;position:relative;overflow:hidden;padding:70px 7vw;display:flex;align-items:center;justify-content:center}
-.sheet-inner{width:min(1080px,100%);position:relative}
-
-/* SAVE THE DATE */
-.save-sheet{background:var(--ivory);text-align:center}
-.save-sheet::before{
- content:"";position:absolute;inset:25px;border:1px solid rgba(184,148,95,.38);pointer-events:none
-}
-.wash{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(1px);opacity:.42}
-.wash.one{background:var(--blue);left:-190px;top:-180px}
-.wash.two{background:var(--sage);right:-220px;bottom:-210px}
-.monogram{font:400 58px "Great Vibes",cursive;color:var(--ink)}
-.monogram span{font-size:.6em;color:var(--blush)}
-.save-sheet h2,.final-sheet h2{font:500 clamp(78px,11vw,145px)/.78 "Great Vibes",cursive;margin:22px 0;color:var(--ink)}
-.save-sheet h2 span{color:var(--blue2)}
-.divider{color:var(--gold);font-size:18px;margin:20px}
-.date{font-size:11px;letter-spacing:.28em}
-.sub{font-size:8px;letter-spacing:.24em;margin-top:20px}
-.scroll-cue{margin-top:38px;background:transparent;border:0;border-bottom:1px solid var(--gold);padding:8px 2px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);cursor:pointer}
-
-/* DETAILS */
-.details-sheet{background:#f0f3f1}
-.details-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:center}
-.eyebrow{font-size:9px;letter-spacing:.25em;margin:0 0 16px}
-.details-copy h3,.story-copy h3{font:500 clamp(48px,6vw,78px)/.9 "Cormorant Garamond",serif;margin:0 0 22px}
-.details-copy h3 em,.story-copy h3 em{font-family:"Great Vibes",cursive;font-weight:400;color:var(--blue2)}
-.details-copy>p{font-size:11px;line-height:1.9;max-width:460px}
-.event{display:grid;grid-template-columns:44px 1fr;gap:15px;padding:20px 0;border-top:1px solid rgba(184,148,95,.35);margin-top:20px}
-.symbol{width:36px;height:36px;border-radius:50%;background:var(--blue2);color:white;display:grid;place-items:center}
-.event small{font-size:8px;letter-spacing:.2em}
-.event strong{display:block;font:500 30px "Cormorant Garamond",serif;margin:3px 0}
-.event p{font-size:10px;margin:0;line-height:1.5}
-.ring-card{background:white;padding:13px 13px 42px;box-shadow:0 24px 55px rgba(59,68,75,.15);transform:rotate(2deg);max-width:400px;margin:auto}
-.ring-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
-.ring-caption{text-align:center;font:italic 20px "Cormorant Garamond",serif;margin-top:18px}
-
-/* STORY */
-.story-sheet{background:#dce7ef}
-.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center}
-.photo-card{padding:11px 11px 42px;background:white;box-shadow:0 24px 55px rgba(59,68,75,.16);transform:rotate(-2deg);max-width:440px}
-.photo-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
-.story-copy p{font-size:12px;line-height:1.9;max-width:410px}
-.signature{font:400 45px "Great Vibes",cursive;color:var(--blue2);margin-top:24px}
-
-/* FINAL */
-.final-sheet{background:linear-gradient(135deg,#f8f3eb,#e6eff5);text-align:center}
-.final-sheet::before{
- content:"";position:absolute;inset:25px;border:1px solid rgba(184,148,95,.38)
-}
-.final-sheet .sheet-inner{z-index:1}
-.final-sheet h2 em{font-style:normal;color:var(--blue2)}
-.final-sheet p{font-size:11px;line-height:1.8}
-.final-name{font:400 48px "Great Vibes",cursive;color:var(--blue2);margin-top:25px}
-
-/* MOBILE */
-@media(max-width:760px){
- #intro{padding:45px 18px 25px}
- .intro-wrap{grid-template-columns:1fr;gap:0}
- .intro-copy{text-align:center;padding:15px 10px}
- .intro-copy h1{font-size:52px}
- .stage{height:450px}
- .envelope-button{height:390px}
- .envelope{height:245px}
- .letter-card strong{font-size:43px}
- .sheet{padding:75px 24px}
- .save-sheet::before,.final-sheet::before{inset:14px}
- .details-grid,.story-grid{grid-template-columns:1fr;gap:48px}
- .details-copy{text-align:center}
- .details-copy>p{margin-left:auto;margin-right:auto}
- .event{text-align:left}
- .story-grid{display:flex;flex-direction:column}
- .story-copy{text-align:center}
- .photo-card{width:min(390px,95%)}
- .ring-card{width:min(360px,95%)}
- .save-sheet h2,.final-sheet h2{font-size:88px}
-}
-</style>
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-<section id="intro">
-  <div class="intro-wrap">
-    <div class="intro-copy">
+  <section class="hero" id="top">
+    <div class="hero-botanical botanical-left"></div>
+    <div class="hero-botanical botanical-right"></div>
+
+    <div class="hero-copy">
       <p class="kicker">JOYCE & KEN</p>
       <h1>A little something<br>for our <em>favorite people.</em></h1>
-      <p>Please open this envelope and save a very special date.</p>
+      <p class="hero-note">Please open this envelope.</p>
     </div>
 
-    <div class="stage">
-      <button class="envelope-button" id="openButton" aria-label="Open the invitation">
+    <div class="envelope-stage">
+      <button class="envelope-button" id="envelopeButton" type="button" aria-label="Open or close the invitation envelope" aria-expanded="false">
         <div class="envelope">
-          <div class="back"></div>
+
+          <div class="env-back"></div>
+
           <div class="letter">
             <div class="letter-card">
-              <small>PLEASE SAVE THE DATE</small>
-              <strong>Joyce <span>&amp;</span> Ken</strong>
-              <b>MAY 11, 2027</b>
+              <p class="letter-kicker">JOYCE & KEN</p>
+              <h2>You are<br><span>invited!</span></h2>
+              <div class="mini-divider">✦</div>
+              <p class="letter-date">MAY 11, 2027</p>
             </div>
           </div>
-          <div class="front"></div>
-          <div class="flap"></div>
+
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
           <div class="seal">J<span>&amp;</span>K</div>
+
         </div>
-        <div class="tap">Tap to open</div>
+
+        <span class="tap-label" id="tapLabel">Tap to open</span>
       </button>
     </div>
-  </div>
-</section>
+  </section>
 
-<main id="invitation">
 
-<section class="sheet save-sheet">
-  <div class="wash one"></div><div class="wash two"></div>
-  <div class="sheet-inner">
-    <div class="monogram">J <span>&amp;</span> K</div>
-    <p class="eyebrow">WE'RE GETTING MARRIED</p>
-    <h2>Joyce <span>&amp;</span> Ken</h2>
-    <div class="divider">✦</div>
-    <p class="date">MAY 11, 2027</p>
-    <p class="sub">PLEASE RESERVE THIS DATE</p>
-    <button class="scroll-cue" id="detailsButton">Open the invitation ↓</button>
-  </div>
-</section>
+  <main class="invitation" id="invitation">
 
-<section class="sheet details-sheet" id="details">
-  <div class="sheet-inner details-grid">
-    <div class="details-copy">
-      <p class="eyebrow">THE WEDDING DAY</p>
-      <h3>Our next chapter<br><em>begins here.</em></h3>
-      <p>With joy in our hearts, we invite you to reserve this special day and celebrate the beginning of our forever.</p>
+    <section class="sheet welcome-sheet">
+      <div class="corner-flower flower-a"></div>
+      <div class="corner-flower flower-b"></div>
 
-      <div class="event">
-        <div class="symbol">✝</div>
-        <div>
-          <small>THE CEREMONY</small>
-          <strong>2:00 PM</strong>
-          <p>Parish of Immaculate Heart of Mary</p>
+      <div class="sheet-content centered">
+        <div class="monogram">J <span>&amp;</span> K</div>
+        <p class="eyebrow">YOU ARE INVITED</p>
+
+        <h2 class="names">Joyce <span>&amp;</span> Ken</h2>
+
+        <div class="divider">✦</div>
+
+        <p class="welcome-copy">
+          With joyful hearts, we invite you to celebrate the beginning
+          of our next chapter.
+        </p>
+
+        <p class="date">MAY 11, 2027</p>
+
+        <button class="open-invitation" id="openInvitation" type="button">
+          Open the invitation <span>↓</span>
+        </button>
+      </div>
+    </section>
+
+
+    <section class="sheet details-sheet" id="details">
+      <div class="details-grid">
+
+        <div class="details-copy">
+          <p class="eyebrow">OUR WEDDING DAY</p>
+          <h3>Our next chapter<br><em>begins here.</em></h3>
+
+          <p class="intro">
+            We would be honored to have you with us as we make our vows
+            and celebrate this beautiful day surrounded by the people we love.
+          </p>
+
+          <div class="event">
+            <div class="event-symbol">✝</div>
+            <div>
+              <p class="event-label">THE CEREMONY</p>
+              <strong>2:00 PM</strong>
+              <p>Parish of Immaculate Heart of Mary</p>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="event-symbol">✦</div>
+            <div>
+              <p class="event-label">THE CELEBRATION</p>
+              <strong>3:30 PM</strong>
+              <p>The Chandelier Events Place</p>
+            </div>
+          </div>
+
+          <p class="small-note">Formal invitation and complete details will follow.</p>
+        </div>
+
+        <div class="ring-feature">
+          <div class="ring-card">
+            <img src="./images/ring.jpg" alt="Joyce and Ken's engagement ring">
+          </div>
+          <p>The beginning of our forever. ♡</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="sheet story-sheet">
+      <div class="story-flower story-flower-left"></div>
+
+      <div class="story-grid">
+        <div class="photo-card">
+          <img src="./images/proposal.jpg" alt="Joyce and Ken">
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow">OUR STORY</p>
+          <h3>One beautiful <em>yes.</em></h3>
+
+          <p>
+            From a question asked with love to a promise we now get to make
+            before God and the people who have been part of our journey.
+          </p>
+
+          <div class="script-line">And now, forever.</div>
         </div>
       </div>
+    </section>
 
-      <div class="event">
-        <div class="symbol">✦</div>
-        <div>
-          <small>THE CELEBRATION</small>
-          <strong>3:30 PM</strong>
-          <p>The Chandelier Events Place</p>
+
+    <section class="sheet final-sheet">
+      <div class="corner-flower final-flower-left"></div>
+      <div class="corner-flower final-flower-right"></div>
+
+      <div class="sheet-content centered">
+        <div class="monogram">J <span>&amp;</span> K</div>
+
+        <p class="eyebrow">PLEASE RESERVE OUR DATE</p>
+
+        <h2 class="final-date">May 11,<br><em>2027</em></h2>
+
+        <p class="final-copy">
+          We would love to celebrate this beautiful day with you.
+        </p>
+
+        <div class="divider">✦</div>
+
+        <div class="final-details">
+          <p><strong>Parish of Immaculate Heart of Mary</strong><br>2:00 PM</p>
+          <p><strong>The Chandelier Events Place</strong><br>3:30 PM</p>
         </div>
+
+        <div class="signature">Joyce &amp; Ken</div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <div class="ring-card">
-        <img src="images/ring.jpg" alt="Joyce and Ken's engagement ring">
-      </div>
-      <div class="ring-caption">The beginning of our forever. ♡</div>
-    </div>
-  </div>
-</section>
+  </main>
 
-<section class="sheet story-sheet">
-  <div class="sheet-inner story-grid">
-    <div class="photo-card">
-      <img src="images/proposal.jpg" alt="Joyce and Ken">
-    </div>
-    <div class="story-copy">
-      <p class="eyebrow">OUR STORY</p>
-      <h3>One beautiful <em>yes.</em></h3>
-      <p>And now, with grateful hearts, we are preparing to make our promise before God and celebrate with the people who have been part of our journey.</p>
-      <div class="signature">And now, forever.</div>
-    </div>
-  </div>
-</section>
-
-<section class="sheet final-sheet">
-  <div class="sheet-inner">
-    <div class="monogram">J <span>&amp;</span> K</div>
-    <p class="eyebrow">PLEASE SAVE THE DATE</p>
-    <h2>May 11,<br><em>2027</em></h2>
-    <p>We would love to celebrate this beautiful day with you.</p>
-    <div class="divider">✦</div>
-    <p>Parish of Immaculate Heart of Mary<br>2:00 PM</p>
-    <p>The Chandelier Events Place<br>3:30 PM</p>
-    <div class="final-name">Joyce & Ken</div>
-  </div>
-</section>
-
-</main>
-
-<script>
-const openButton=document.getElementById('openButton');
-const invitation=document.getElementById('invitation');
-let opened=false;
-
-openButton.addEventListener('click',()=>{
-  if(opened) return;
-  opened=true;
-  openButton.classList.add('open');
-  setTimeout(()=>{
-    invitation.classList.add('show');
-    invitation.scrollIntoView({behavior:'smooth',block:'start'});
-  },950);
-});
-
-document.getElementById('detailsButton').addEventListener('click',()=>{
-  document.getElementById('details').scrollIntoView({behavior:'smooth'});
-});
-</script>
-
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -1,17 +1,33 @@
-# Joyce & Ken — Envelope Wedding Invitation
+# Joyce & Ken — Whimsical Spring Invitation (V2)
 
-This redesign is based on the envelope-opening experience you shared as inspiration.
+## Folder structure
 
-## Design direction
-- A physical invitation / stationery aesthetic
-- One cohesive powder-blue, blush, peach, sage, ivory and champagne palette
-- A smooth envelope-opening interaction
-- Elegant typography and generous negative space
-- Your proposal photo and ring photo used as meaningful editorial details
-- No pop-up book, cartoon people, or collage-style stock-photo mashups
+```text
+index.html
+style.css
+script.js
+images/
+  proposal.jpg
+  ring.jpg
+  couple.jpg
+```
+
+## Changes in this version
+
+- Envelope now says **“You are invited!”**
+- Clicking the envelope opens it
+- Clicking it again closes it
+- Removed the “interactive save the date” wording
+- “Open the invitation” is now a working button that smoothly scrolls to the wedding details
+- Returned to separate **HTML + CSS + JavaScript** files
+- Background botanical treatment is softer and closer to a whimsical spring palette:
+  powder blue, blush, peach, sage, lilac and ivory
+- Reduced the yellow/gold dominance to subtle champagne accents only
 
 ## GitHub Pages
-Upload all files and the `images` folder to the root of your repository, then enable:
-Settings → Pages → Deploy from a branch → `main` → `/(root)`
 
-The floral texture is intentionally limited to a single consistent stock floral source so the design feels cohesive rather than like a collection of unrelated images.
+Upload `index.html`, `style.css`, `script.js`, and the entire `images` folder directly to the root of your GitHub repository.
+
+Then:
+
+**Settings → Pages → Deploy from a branch → main → /(root)**
