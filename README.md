@@ -1,15 +1,23 @@
-# Joyce & Ken — Pop-Up Diorama Wedding Invitation
+# Joyce & Ken — Elegant Pop-Up Wedding Invitation
 
-This version is inspired by the reference style: an open paper book with a layered 3D pop-up wedding scene rising from the center.
+This version intentionally avoids cartoon/CSS people. It uses:
+- A refined paper-book opening
+- Layered paper/chapel styling
+- Real photos of Joyce & Ken
+- Subtle floral photography from Pexels
+- Warm fairy lights and magical dust
+- Soft blue, blush, peach, sage and cream palette
 
-### Details
-- Joyce & Ken
-- May 11, 2027
-- Ceremony: 2:00 PM — Parish of Immaculate Heart of Mary
-- Reception: 3:30 PM — The Chandelier Events Place
+## Wedding
+May 11, 2027
+Ceremony — 2:00 PM, Parish of Immaculate Heart of Mary
+Reception — 3:30 PM, The Chandelier Events Place
 
-### Publish on GitHub Pages
-Upload `index.html`, `style.css`, and `script.js` to the root of your `main` branch, then use Settings → Pages → Deploy from a branch → main → /(root).
+## GitHub Pages
+Upload `index.html`, `style.css`, `script.js`, and the `images` folder to the root of the `main` branch. Then enable GitHub Pages from Settings → Pages → Deploy from a branch → main → /(root).
 
-## Photos
-Three photos are used to keep the invitation elegant and uncluttered: proposal moment, candid dinner, and couple portrait.
+### Floral image sources
+The floral photography is loaded from Pexels image CDN URLs. The design uses these free-stock floral references:
+- Blue/pink hydrangeas: https://www.pexels.com/photo/blue-and-pink-flowers-18286229/
+- White/pink/yellow wedding bouquet: https://www.pexels.com/photo/white-pink-and-yellow-bouquet-of-flowers-5344925/
+- Pastel blue/white hydrangeas: https://www.pexels.com/photo/hydrangea-flowers-in-a-basket-13524629/
