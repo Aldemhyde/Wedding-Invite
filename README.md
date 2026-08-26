@@ -42,3 +42,11 @@ Settings → Pages → Deploy from a branch → main → /(root)
 - Made the invitation and VIP dedication pages use softer rounded forms.
 - Increased spacing and refined text hierarchy for easier reading.
 - Kept the separate `index.html`, `style.css`, and `script.js` structure.
+
+
+## Soft Garden redesign
+- Completely replaced the previous angular envelope.
+- New envelope uses a properly proportioned rounded stationery suite.
+- Removed triangular flaps and sharp geometric background elements.
+- Rebuilt the landing background with soft watercolor circles, rounded floral windows, and floating pastel blooms.
+- Kept the rest of the invitation pages intact so only the problematic landing experience changed.

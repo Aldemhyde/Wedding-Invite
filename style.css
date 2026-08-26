@@ -670,3 +670,333 @@ button{font-family:inherit}
   .mini-right{right:7%;top:8%}
   .details-section,.story-section{min-height:auto;padding-top:80px;padding-bottom:80px}
 }
+
+
+/* =========================================================
+   SOFT GARDEN LANDING PAGE — final proportion redesign
+   Replaces the previous angular envelope and sharp background.
+   ========================================================= */
+
+.soft-garden-hero{
+  min-height:calc(100svh - 72px);
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(330px,.9fr) minmax(460px,1.1fr);
+  align-items:center;
+  gap:5vw;
+  padding:6vh 8vw 7vh;
+  background:
+    linear-gradient(120deg,#fdfbf7 0%,#fbf7f2 46%,#f7faf8 100%);
+}
+
+.watercolor{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(28px);
+  opacity:.52;
+  pointer-events:none;
+}
+.wash-a{width:42vw;height:42vw;left:-19vw;bottom:-25vw;background:#cfe1ee}
+.wash-b{width:34vw;height:34vw;right:-14vw;top:-18vw;background:#edc7d1}
+.wash-c{width:28vw;height:28vw;left:43%;bottom:-20vw;background:#f0d0b7}
+
+.garden-photo{
+  position:absolute;
+  background-image:
+    linear-gradient(rgba(255,255,255,.28),rgba(255,255,255,.28)),
+    url("https://images.pexels.com/photos/18286229/pexels-photo-18286229.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-size:cover;
+  background-position:center;
+  opacity:.18;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+.garden-photo-left{
+  width:280px;height:280px;
+  left:-88px;bottom:-65px;
+  border-radius:50%;
+}
+.garden-photo-right{
+  width:330px;height:330px;
+  right:-100px;top:-100px;
+  border-radius:50%;
+}
+
+.soft-garden-hero .hero-copy{
+  position:relative;
+  z-index:4;
+  max-width:470px;
+  padding:0;
+}
+.soft-garden-hero .hero-copy .eyebrow{
+  color:#718a9d;
+  margin-bottom:18px;
+}
+.soft-garden-hero .hero-copy h1{
+  font-size:clamp(58px,5.8vw,90px);
+  line-height:.88;
+  letter-spacing:-.035em;
+  margin:0;
+}
+.soft-garden-hero .hero-copy h1 em{
+  color:#91aec3;
+}
+.soft-garden-hero .hero-copy>p:last-child{
+  max-width:410px;
+  margin-top:25px;
+  font-size:21px;
+  color:#66747d;
+}
+
+.petal{
+  position:absolute;
+  z-index:2;
+  width:62px;height:62px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  box-shadow:0 14px 30px rgba(83,101,111,.08);
+  font-size:22px;
+  pointer-events:none;
+}
+.petal-a{left:7%;top:14%;background:#dbeaf4;color:#88a8c0}
+.petal-b{left:40%;top:10%;background:#f4d8df;color:#c58f9e}
+.petal-c{right:8%;bottom:15%;background:#f5dfc9;color:#b89970}
+.petal-d{right:40%;bottom:8%;background:#dce5d4;color:#93a68c}
+
+/* Properly proportioned stationery suite */
+.stationery-stage{
+  position:relative;
+  z-index:5;
+  width:min(590px,100%);
+  height:500px;
+  display:grid;
+  place-items:center;
+  margin:auto;
+}
+
+.stationery-button{
+  position:relative;
+  width:min(560px,100%);
+  height:390px;
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  perspective:1400px;
+}
+
+.stationery-shadow{
+  position:absolute;
+  width:76%;
+  height:42px;
+  left:12%;
+  bottom:42px;
+  border-radius:50%;
+  background:rgba(71,83,91,.16);
+  filter:blur(22px);
+  transition:transform .7s ease,opacity .7s ease;
+}
+
+.invitation-card{
+  position:absolute;
+  width:82%;
+  height:290px;
+  left:9%;
+  bottom:70px;
+  z-index:2;
+  border-radius:28px;
+  padding:10px;
+  background:#fffdf9;
+  box-shadow:0 24px 46px rgba(67,77,85,.18);
+  transition:transform .9s cubic-bezier(.2,.78,.2,1);
+}
+
+.card-inner{
+  height:100%;
+  border:1px solid rgba(185,154,103,.28);
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(213,231,244,.35),transparent 18%),
+    radial-gradient(circle at 85% 78%,rgba(243,210,220,.32),transparent 18%),
+    #fffdfa;
+}
+.card-inner p{
+  margin:0 0 12px;
+  font-size:8px;
+  letter-spacing:.24em;
+  color:#72818a;
+}
+.card-inner h2{
+  margin:0;
+  font:400 58px/1 "Great Vibes",cursive;
+  color:#4d5a65;
+}
+.card-inner h2 span{color:#d39ba9}
+.card-inner small{
+  margin-top:10px;
+  font-size:7px;
+  letter-spacing:.16em;
+  color:#78858c;
+}
+.card-flourish{
+  color:#b99a67;
+  font-size:17px;
+  margin:4px 0 0;
+}
+
+/* No triangular flap or clip-path: a soft, rounded envelope pocket */
+.soft-envelope{
+  position:absolute;
+  width:100%;
+  height:230px;
+  left:0;
+  bottom:40px;
+  z-index:4;
+  overflow:hidden;
+  border-radius:30px 30px 42px 42px;
+  background:
+    radial-gradient(circle at 18% 25%,rgba(255,255,255,.22),transparent 15%),
+    linear-gradient(135deg,#e9c8cf 0%,#e2b8c2 48%,#d8aeb9 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    0 20px 36px rgba(76,83,90,.16);
+  transition:transform .9s cubic-bezier(.2,.78,.2,1), opacity .65s ease;
+}
+
+.envelope-pattern{
+  position:absolute;
+  inset:0;
+  opacity:.32;
+  background:
+    radial-gradient(circle at 20% 25%,#f4dfe3 0 8px,transparent 9px),
+    radial-gradient(circle at 78% 68%,#d6e5ee 0 7px,transparent 8px),
+    radial-gradient(circle at 55% 32%,#f1d8bc 0 6px,transparent 7px);
+  background-size:115px 115px,135px 135px,150px 150px;
+}
+
+.envelope-label{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-48%);
+  width:180px;height:112px;
+  border-radius:22px;
+  background:rgba(255,253,249,.82);
+  box-shadow:0 10px 22px rgba(105,85,92,.10);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.envelope-label span{
+  font-size:7px;
+  letter-spacing:.24em;
+  color:#89949a;
+  margin-bottom:7px;
+}
+.envelope-label strong{
+  font:400 44px/1 "Great Vibes",cursive;
+  color:#61798c;
+}
+.envelope-label strong i{
+  color:#d69ba9;
+  font-size:.58em;
+  font-style:normal;
+}
+
+.wax-seal{
+  position:absolute;
+  width:58px;height:58px;
+  border-radius:50%;
+  left:50%;bottom:-10px;
+  transform:translateX(-50%);
+  display:grid;place-items:center;
+  background:#8eafc3;
+  border:5px solid rgba(255,253,249,.88);
+  color:white;
+  font:400 22px "Great Vibes",cursive;
+  box-shadow:0 8px 20px rgba(77,98,112,.2);
+}
+.wax-seal span{font-size:12px}
+
+.stationery-button.open .invitation-card{
+  transform:translateY(-150px) rotate(-1deg);
+}
+.stationery-button.open .soft-envelope{
+  transform:translateY(82px) scale(.98);
+}
+.stationery-button.open .stationery-shadow{
+  transform:scale(.85);
+  opacity:.65;
+}
+
+.soft-garden-hero .envelope-instruction{
+  position:absolute;
+  bottom:18px;
+  margin:0;
+  text-align:center;
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#71818b;
+}
+.scroll-note{
+  position:absolute;
+  bottom:-8px;
+  margin:0;
+  font-size:8px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#8a969d;
+  text-align:center;
+}
+.scroll-note span{
+  display:block;
+  margin-top:5px;
+  font-size:17px;
+  color:#91aec3;
+}
+
+@media(max-width:950px){
+  .soft-garden-hero{
+    min-height:calc(100svh - 64px);
+    grid-template-columns:1fr;
+    gap:0;
+    padding:7vh 24px 5vh;
+  }
+  .soft-garden-hero .hero-copy{text-align:center;margin:auto}
+  .soft-garden-hero .hero-copy>p:last-child{margin-left:auto;margin-right:auto}
+  .stationery-stage{height:430px;margin-top:8px}
+  .petal-a{left:8%;top:10%}
+  .petal-b{left:75%;top:16%}
+  .petal-c{right:6%;bottom:9%}
+  .petal-d{left:5%;bottom:8%}
+}
+@media(max-width:560px){
+  .soft-garden-hero{padding:5vh 18px 4vh}
+  .soft-garden-hero .hero-copy h1{font-size:51px}
+  .soft-garden-hero .hero-copy>p:last-child{font-size:19px;margin-top:18px}
+  .stationery-stage{height:360px}
+  .stationery-button{width:min(430px,100%);height:315px}
+  .invitation-card{height:210px;bottom:63px;border-radius:22px}
+  .card-inner{border-radius:15px}
+  .card-inner h2{font-size:44px}
+  .soft-envelope{height:172px;bottom:32px;border-radius:24px 24px 34px 34px}
+  .envelope-label{width:142px;height:88px;border-radius:17px}
+  .envelope-label strong{font-size:35px}
+  .wax-seal{width:47px;height:47px;font-size:18px}
+  .stationery-button.open .invitation-card{transform:translateY(-104px) rotate(-1deg)}
+  .stationery-button.open .soft-envelope{transform:translateY(56px) scale(.98)}
+  .soft-garden-hero .envelope-instruction{bottom:10px;font-size:7px}
+  .scroll-note{display:none}
+  .petal{transform:scale(.72)}
+  .garden-photo-left{width:210px;height:210px}
+  .garden-photo-right{width:240px;height:240px}
+}
