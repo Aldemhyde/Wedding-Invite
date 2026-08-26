@@ -1,14 +1,18 @@
 
 :root{
-  --ink:#506170;
-  --muted:#71818c;
-  --blue:#a9d7f1;
+  --ink:#4d6270;
+  --muted:#71828d;
+  --sky:#bfe5f5;
+  --blue:#9ed2ea;
   --blue-strong:#6fa9c8;
-  --pink:#f3b9cb;
-  --pink-soft:#ffdce8;
-  --peach:#ffd6ae;
-  --lilac:#d8c9f0;
-  --mint:#cfeecf;
+  --pink:#f2abc2;
+  --pink-soft:#ffd9e6;
+  --peach:#ffcfa5;
+  --butter:#f8e49a;
+  --lilac:#d8c4ee;
+  --lavender:#e7dcf5;
+  --mint:#c8ebcf;
+  --sage:#dbeac9;
   --cream:#fffaf5;
   --white:#fffefd;
   --gold:#c7a05f;
@@ -36,10 +40,11 @@ button{font:inherit}
   display:grid;grid-template-columns:minmax(310px,.95fr) minmax(430px,1.05fr);
   align-items:center;gap:6vw;padding:8vh 9vw;
   background:
-    radial-gradient(circle at 18% 20%,rgba(191,226,248,.58),transparent 24%),
-    radial-gradient(circle at 82% 14%,rgba(255,202,219,.60),transparent 26%),
-    radial-gradient(circle at 82% 83%,rgba(255,219,174,.52),transparent 24%),
-    linear-gradient(135deg,#fffdf8 0%,#fff8f5 50%,#fffdf7 100%);
+    radial-gradient(circle at 13% 16%,rgba(191,229,245,.82),transparent 24%),
+    radial-gradient(circle at 72% 10%,rgba(255,217,230,.82),transparent 25%),
+    radial-gradient(circle at 88% 78%,rgba(255,207,165,.72),transparent 25%),
+    radial-gradient(circle at 46% 92%,rgba(216,196,238,.52),transparent 23%),
+    linear-gradient(135deg,#fffdf8 0%,#fff8f7 47%,#f8fcf7 100%);
 }
 .wash-one{width:42vw;height:42vw;left:-24vw;bottom:-28vw;background:var(--mint)}
 .wash-two{width:28vw;height:28vw;right:-14vw;top:-18vw;background:var(--lilac)}
@@ -64,7 +69,10 @@ button{font:inherit}
 .invitation-paper{
   position:absolute;z-index:1;left:9%;bottom:72px;width:82%;height:276px;border-radius:32px;
   padding:36px 35px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  overflow:hidden;background:linear-gradient(145deg,#fffefd,#fff7f4);
+  overflow:hidden;background:
+    linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,247,244,.96)),
+    radial-gradient(circle at 12% 12%,rgba(191,229,245,.36),transparent 24%),
+    radial-gradient(circle at 88% 88%,rgba(255,217,230,.32),transparent 24%);
   box-shadow:0 20px 48px rgba(74,86,94,.14);
   transition:transform .72s cubic-bezier(.22,.75,.25,1);
 }
@@ -81,7 +89,10 @@ button{font:inherit}
 
 .envelope-pocket{
   position:absolute;z-index:2;left:0;right:0;bottom:30px;height:212px;border-radius:38px;overflow:hidden;
-  background:linear-gradient(135deg,#f6b8cb,#eaa9c0 50%,#f3b6cd);
+  background:
+    radial-gradient(circle at 10% 25%,rgba(191,229,245,.45),transparent 20%),
+    radial-gradient(circle at 88% 15%,rgba(248,228,154,.28),transparent 18%),
+    linear-gradient(135deg,#f6b8cb,#efb5cb 48%,#f3c5d6);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.48),0 18px 36px rgba(81,91,98,.15);
   transition:transform .72s cubic-bezier(.22,.75,.25,1);
 }
@@ -109,8 +120,10 @@ button{font:inherit}
 .page{min-height:92svh;padding:100px 8vw;position:relative;overflow:hidden;display:grid;place-items:center}
 .invitation-page{
   background:
-    radial-gradient(circle at 12% 15%,rgba(183,226,250,.45),transparent 25%),
-    radial-gradient(circle at 90% 80%,rgba(255,204,220,.40),transparent 28%),
+    radial-gradient(circle at 10% 14%,rgba(191,229,245,.72),transparent 24%),
+    radial-gradient(circle at 88% 15%,rgba(216,196,238,.55),transparent 24%),
+    radial-gradient(circle at 86% 83%,rgba(255,207,165,.62),transparent 27%),
+    radial-gradient(circle at 18% 84%,rgba(200,235,207,.58),transparent 25%),
     linear-gradient(145deg,#fffdf8,#fff8f5);
 }
 .opening-flower-left{width:360px;height:360px;left:-130px;bottom:-130px;background-image:url("images/florals/hydrangea-blue.jpg")}
@@ -123,15 +136,18 @@ button{font:inherit}
 
 .dedication-page{
   background:
-    radial-gradient(circle at 8% 12%,rgba(207,238,207,.46),transparent 25%),
-    radial-gradient(circle at 88% 14%,rgba(216,201,240,.42),transparent 26%),
+    radial-gradient(circle at 8% 12%,rgba(200,235,207,.70),transparent 25%),
+    radial-gradient(circle at 88% 14%,rgba(216,196,238,.66),transparent 26%),
+    radial-gradient(circle at 88% 82%,rgba(255,217,230,.60),transparent 27%),
+    radial-gradient(circle at 12% 82%,rgba(248,228,154,.42),transparent 24%),
     linear-gradient(135deg,#fffaf4,#fffdf9);
 }
 .dedication-left{width:390px;height:390px;left:-150px;bottom:-145px;background-image:url("images/florals/hydrangea-blush.jpg")}
 .dedication-right{width:350px;height:350px;right:-125px;top:-125px;background-image:url("images/florals/hydrangea-light.jpg")}
 .dedication-card{
   width:min(900px,100%);padding:82px min(10vw,105px);position:relative;z-index:2;text-align:center;
-  border-radius:58px;background:rgba(255,254,251,.94);box-shadow:0 25px 70px rgba(76,89,97,.10);
+  border-radius:58px;background:
+    linear-gradient(145deg,rgba(255,254,251,.96),rgba(255,250,245,.95));box-shadow:0 25px 70px rgba(76,89,97,.10);
 }
 .dedication-card::after{content:"";position:absolute;inset:14px;border:1px solid rgba(199,160,95,.2);border-radius:45px}
 .dedication-card>*{position:relative;z-index:1}
@@ -152,7 +168,11 @@ button{font:inherit}
 
 .couple-page{
   grid-template-columns:minmax(280px,.9fr) minmax(280px,.8fr);gap:8vw;
-  background:linear-gradient(135deg,#dff1fb,#edf5ff);
+  background:
+    radial-gradient(circle at 8% 14%,rgba(216,196,238,.48),transparent 24%),
+    radial-gradient(circle at 92% 16%,rgba(255,217,230,.68),transparent 25%),
+    radial-gradient(circle at 76% 88%,rgba(200,235,207,.58),transparent 26%),
+    linear-gradient(135deg,#e3f4fc,#edf5ff 52%,#fff8f3);
 }
 .couple-flower{width:360px;height:360px;right:-135px;bottom:-135px;background-image:url("images/florals/hydrangea-blue.jpg")}
 .couple-photo{position:relative;z-index:2;width:min(480px,100%);margin:0;padding:12px 12px 36px;border-radius:48px;background:#fffefd;box-shadow:0 20px 50px rgba(75,92,101,.13)}
@@ -164,9 +184,10 @@ button{font:inherit}
 .final-page{
   min-height:75svh;position:relative;overflow:hidden;display:grid;place-items:center;align-content:center;text-align:center;
   background:
-    radial-gradient(circle at 18% 22%,rgba(183,226,250,.55),transparent 25%),
-    radial-gradient(circle at 82% 18%,rgba(255,193,214,.52),transparent 26%),
-    radial-gradient(circle at 80% 85%,rgba(255,215,174,.50),transparent 26%),
+    radial-gradient(circle at 14% 18%,rgba(191,229,245,.78),transparent 25%),
+    radial-gradient(circle at 84% 18%,rgba(255,217,230,.74),transparent 26%),
+    radial-gradient(circle at 80% 84%,rgba(255,207,165,.68),transparent 26%),
+    radial-gradient(circle at 20% 82%,rgba(216,196,238,.58),transparent 24%),
     linear-gradient(145deg,#fffdf8,#fff8f5);
 }
 .final-page h2{position:relative;z-index:2;margin:0;font:400 clamp(78px,10vw,140px)/.9 "Great Vibes",cursive;color:#506170}
@@ -200,4 +221,44 @@ button{font:inherit}
   .opening-flower-left,.dedication-left,.final-left{left:-145px}
   .opening-flower-right,.dedication-right,.final-right{right:-145px}
   .details-text h2{font-size:58px}.event h3{font-size:27px}
+}
+
+
+/* Palette enhancement — richer spring color throughout without changing the layout */
+.hero .kicker{color:#6f93a8}
+.invitation-page .kicker{color:#9a7fa7}
+.dedication-page .kicker{color:#73977b}
+.details-page .kicker{color:#7199b0}
+.couple-page .kicker{color:#9c7390}
+.final-page .kicker{color:#8a82a8}
+
+.details-page .event:nth-of-type(2){border-top-color:rgba(111,169,200,.34)}
+.details-page .event:nth-of-type(3){border-top-color:rgba(242,171,194,.42)}
+.event-label{color:#7694a5}
+.details-page .event:nth-of-type(3) .event-label{color:#bd8196}
+
+.ring-photo{
+  background:linear-gradient(145deg,#fffefd,#fff6f8);
+}
+.couple-photo{
+  background:linear-gradient(145deg,#fffefd,#f5fbff);
+}
+
+.paper-divider b,.divider{color:#d39a75}
+.final-page h2 span{color:#e49ab4}
+
+@media (min-width:851px){
+  .details-page::before,
+  .couple-page::before{
+    content:"";
+    position:absolute;
+    width:230px;height:230px;border-radius:50%;
+    filter:blur(12px);opacity:.42;pointer-events:none;
+  }
+  .details-page::before{
+    left:-90px;bottom:-95px;background:var(--pink-soft);
+  }
+  .couple-page::before{
+    left:-95px;top:-90px;background:var(--butter);
+  }
 }

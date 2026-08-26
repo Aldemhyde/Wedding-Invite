@@ -1,8 +1,14 @@
-# Joyce & Ken — Storybook Rebuild v3
+# Joyce & Ken — Storybook Rebuild v4: Full Spring Palette
 
-Fresh rebuild focused on the parts that were not working:
-- Brighter, happier spring palette (blue, blush, peach, lilac, mint).
-- Removed CSS-drawn flower icons and angular floral shapes.
-- Replaced them with soft photographic hydrangea treatments from the visual references supplied in this conversation.
-- Every floral image is feathered with a radial mask so there are no hard square, diagonal, or sharp edges.
-- Typography, invitation flow, wedding details, ring page, and couple page were intentionally preserved.
+This version keeps the layout and typography you approved, but makes the overall invitation feel richer and more celebratory.
+
+Palette is now distributed throughout the entire invitation:
+- powder/sky blue
+- blush pink
+- peach
+- soft lilac
+- lavender
+- fresh mint
+- gentle butter yellow accents
+
+The colors are used as soft layered washes and section-specific accents, rather than harsh blocks, so the invitation still feels elegant and cohesive.
