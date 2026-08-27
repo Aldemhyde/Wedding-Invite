@@ -1,0 +1,925 @@
+/* =========================================================
+   JOYCE & KEN — SPRING WEDDING INVITATION
+   Clean rebuild: elegant wedding styling, responsive layout,
+   restrained florals, and a redesigned envelope.
+========================================================= */
+
+:root{
+  --ink:#465865;
+  --muted:#71818a;
+  --blue:#88aebe;
+  --blue-deep:#5f8798;
+  --blush:#dba7ae;
+  --blush-soft:#f3dde0;
+  --sage:#b9cdbb;
+  --sage-soft:#e3eee2;
+  --cream:#fcfaf6;
+  --paper:#fffdfa;
+  --gold:#b89a62;
+  --line:rgba(116,104,83,.20);
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+button{font:inherit}
+
+/* =========================================================
+   GLOBAL DECORATION
+========================================================= */
+
+.kicker{
+  margin:0 0 16px;
+  font-size:9px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#71808a;
+}
+
+.sun-wash{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(24px);
+  pointer-events:none;
+  z-index:0;
+}
+
+.floral-cloud{
+  position:absolute;
+  background-size:cover;
+  background-position:center;
+  pointer-events:none;
+  opacity:.82;
+  filter:saturate(.9) contrast(1.02);
+  -webkit-mask-image:radial-gradient(circle at center,#000 42%,rgba(0,0,0,.8) 58%,transparent 76%);
+  mask-image:radial-gradient(circle at center,#000 42%,rgba(0,0,0,.8) 58%,transparent 76%);
+  z-index:1;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:100svh;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(300px,.95fr) minmax(400px,1.05fr);
+  align-items:center;
+  gap:7vw;
+  padding:8vh 9vw;
+  background:
+    radial-gradient(circle at 10% 15%,rgba(190,214,224,.45),transparent 25%),
+    radial-gradient(circle at 82% 12%,rgba(232,211,215,.45),transparent 24%),
+    radial-gradient(circle at 88% 84%,rgba(223,235,223,.55),transparent 25%),
+    linear-gradient(135deg,#fffdf9 0%,#fbf8f3 52%,#f9fbf7 100%);
+}
+
+.wash-one{
+  width:34vw;
+  height:34vw;
+  left:-18vw;
+  bottom:-20vw;
+  background:rgba(185,205,187,.45);
+}
+
+.wash-two{
+  width:26vw;
+  height:26vw;
+  right:-12vw;
+  top:-15vw;
+  background:rgba(218,196,221,.30);
+}
+
+.hero-flower-left{
+  width:260px;
+  height:260px;
+  left:-85px;
+  bottom:-90px;
+  background-image:url("images/florals/hydrangea-blue.jpg");
+}
+
+.hero-flower-right{
+  width:235px;
+  height:235px;
+  right:-80px;
+  top:-75px;
+  background-image:url("images/florals/hydrangea-light.jpg");
+}
+
+.hero-copy{
+  position:relative;
+  z-index:3;
+  max-width:540px;
+}
+
+.hero h1{
+  margin:0;
+  font:500 clamp(58px,6vw,92px)/.9 "Cormorant Garamond",serif;
+  letter-spacing:-.035em;
+}
+
+.hero h1 em,
+.display-name em,
+.dedication-card em,
+.couple-copy em{
+  font-family:"Great Vibes",cursive;
+  font-weight:400;
+  color:#7ba0b2;
+}
+
+.intro-text{
+  max-width:410px;
+  margin:24px 0 0;
+  font:400 22px/1.55 "Cormorant Garamond",serif;
+  color:#64747c;
+}
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.invitation-area{
+  position:relative;
+  z-index:3;
+  width:min(560px,100%);
+  height:440px;
+  margin:auto;
+  display:grid;
+  place-items:center;
+}
+
+.invitation-button{
+  position:relative;
+  width:min(520px,100%);
+  height:360px;
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+}
+
+.paper-shadow{
+  position:absolute;
+  left:14%;
+  right:14%;
+  bottom:10px;
+  height:30px;
+  border-radius:50%;
+  background:rgba(54,63,68,.16);
+  filter:blur(16px);
+}
+
+/* Invitation card tucked inside the envelope */
+.invitation-paper{
+  position:absolute;
+  z-index:2;
+  left:10%;
+  bottom:82px;
+  width:80%;
+  height:260px;
+  padding:30px;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,252,247,.98));
+  border:1px solid rgba(184,154,98,.28);
+  box-shadow:0 16px 36px rgba(66,72,75,.12);
+  transition:transform .7s cubic-bezier(.22,.75,.25,1);
+}
+
+.invitation-paper::after{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(184,154,98,.25);
+  pointer-events:none;
+}
+
+.paper-overline,
+.invitation-paper h2,
+.paper-divider,
+.invitation-paper small{
+  position:relative;
+  z-index:2;
+}
+
+.paper-overline{
+  margin:0 0 12px;
+  font-size:8px;
+  letter-spacing:.22em;
+  color:#6d7d85;
+}
+
+.invitation-paper h2{
+  margin:0;
+  font:500 56px/.95 "Cormorant Garamond",serif;
+  color:#50616b;
+}
+
+.paper-divider{
+  margin:12px 0 9px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--gold);
+}
+
+.paper-divider span{
+  width:36px;
+  height:1px;
+  background:rgba(184,154,98,.5);
+}
+
+.paper-divider b{font-size:13px}
+
+.invitation-paper small{
+  font-size:7px;
+  letter-spacing:.16em;
+  color:#7a8991;
+}
+
+.paper-floral{
+  position:absolute;
+  width:115px;
+  height:115px;
+  background-size:cover;
+  background-position:center;
+  opacity:.38;
+  z-index:1;
+  -webkit-mask-image:radial-gradient(circle,#000 42%,transparent 73%);
+  mask-image:radial-gradient(circle,#000 42%,transparent 73%);
+}
+
+.pf-left{
+  left:-38px;
+  top:-36px;
+  background-image:url("images/florals/hydrangea-blue.jpg");
+}
+
+.pf-right{
+  right:-38px;
+  bottom:-36px;
+  background-image:url("images/florals/hydrangea-blush.jpg");
+}
+
+/* Main envelope: clean, wedding-stationery style */
+.envelope-pocket{
+  position:absolute;
+  z-index:4;
+  left:0;
+  right:0;
+  bottom:28px;
+  height:205px;
+  overflow:hidden;
+  border-radius:5px 5px 18px 18px;
+  background:
+    linear-gradient(145deg,#d6a0a9,#c98f9a 52%,#d9a8b0);
+  box-shadow:
+    0 18px 34px rgba(77,69,70,.17),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .7s cubic-bezier(.22,.75,.25,1);
+}
+
+/* Actual envelope folds */
+.envelope-pocket::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:100%;
+  background:
+    linear-gradient(33deg,transparent 49.4%,rgba(255,255,255,.26) 49.8%,rgba(255,255,255,.26) 50.2%,transparent 50.6%),
+    linear-gradient(-33deg,transparent 49.4%,rgba(255,255,255,.26) 49.8%,rgba(255,255,255,.26) 50.2%,transparent 50.6%);
+  opacity:.9;
+}
+
+/* Center triangular lower fold */
+.envelope-pocket::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-72px;
+  width:260px;
+  height:160px;
+  transform:translateX(-50%) rotate(45deg);
+  background:rgba(255,255,255,.12);
+  border-top:1px solid rgba(255,255,255,.26);
+  border-left:1px solid rgba(255,255,255,.20);
+}
+
+/* Small floral touches on envelope */
+.pocket-floral{
+  position:absolute;
+  z-index:1;
+  width:105px;
+  height:105px;
+  background-size:cover;
+  background-position:center;
+  opacity:.18;
+  -webkit-mask-image:radial-gradient(circle,#000 43%,transparent 74%);
+  mask-image:radial-gradient(circle,#000 43%,transparent 74%);
+}
+
+.pocket-floral-left{
+  left:-30px;
+  bottom:-32px;
+  background-image:url("images/florals/hydrangea-light.jpg");
+}
+
+.pocket-floral-right{
+  right:-30px;
+  top:-34px;
+  background-image:url("images/florals/hydrangea-blush.jpg");
+}
+
+/* Remove package-style name label */
+.pocket-label{
+  display:none;
+}
+
+/* Elegant wax seal */
+.seal{
+  position:absolute;
+  z-index:7;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  border:4px solid #fdf9f3;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 32% 28%,rgba(255,255,255,.30) 0 7%,transparent 8%),
+    radial-gradient(circle at 70% 75%,rgba(53,86,100,.16),transparent 42%),
+    linear-gradient(145deg,#7faabd,#5f899d);
+  color:white;
+  font-size:15px;
+  box-shadow:
+    0 8px 18px rgba(55,68,74,.22),
+    inset 0 2px 4px rgba(255,255,255,.22),
+    inset 0 -3px 5px rgba(48,74,87,.18);
+}
+
+.invitation-button.open .invitation-paper{
+  transform:translateY(-122px) rotate(-.7deg);
+}
+
+.invitation-button.open .envelope-pocket{
+  transform:translateY(48px);
+}
+
+.tap-text{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:0;
+  text-align:center;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#71818a;
+}
+
+/* =========================================================
+   SHARED PAGES
+========================================================= */
+
+.page{
+  min-height:92svh;
+  padding:100px 8vw;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+}
+
+.invitation-page{
+  background:
+    radial-gradient(circle at 8% 12%,rgba(190,214,224,.40),transparent 23%),
+    radial-gradient(circle at 92% 15%,rgba(235,218,220,.45),transparent 24%),
+    linear-gradient(145deg,#fffdf9,#faf7f1);
+}
+
+.opening-flower-left{
+  width:250px;height:250px;left:-85px;bottom:-85px;
+  background-image:url("images/florals/hydrangea-blue.jpg");
+}
+
+.opening-flower-right{
+  width:220px;height:220px;right:-75px;top:-70px;
+  background-image:url("images/florals/hydrangea-light.jpg");
+}
+
+.page-content{
+  position:relative;
+  z-index:3;
+  text-align:center;
+  max-width:720px;
+}
+
+.display-name{
+  margin:0;
+  font:500 clamp(56px,7vw,94px)/.92 "Cormorant Garamond",serif;
+  letter-spacing:-.02em;
+}
+
+.divider{
+  margin:18px 0;
+  color:var(--gold);
+  font-size:18px;
+}
+
+.body-copy{
+  max-width:560px;
+  margin:0 auto;
+  font:400 23px/1.55 "Cormorant Garamond",serif;
+  color:#65757d;
+}
+
+.date{
+  margin:30px 0 0;
+  font-size:10px;
+  letter-spacing:.22em;
+  color:#668496;
+}
+
+/* =========================================================
+   DEDICATION
+========================================================= */
+
+.dedication-page{
+  background:
+    radial-gradient(circle at 8% 12%,rgba(205,222,204,.50),transparent 25%),
+    radial-gradient(circle at 90% 14%,rgba(218,207,226,.45),transparent 25%),
+    linear-gradient(135deg,#fbfaf5,#fffdf9);
+}
+
+.dedication-left{
+  width:260px;height:260px;left:-90px;bottom:-90px;
+  background-image:url("images/florals/hydrangea-blush.jpg");
+}
+
+.dedication-right{
+  width:230px;height:230px;right:-80px;top:-75px;
+  background-image:url("images/florals/hydrangea-light.jpg");
+}
+
+.dedication-card{
+  width:min(900px,100%);
+  padding:78px min(9vw,100px);
+  position:relative;
+  z-index:3;
+  text-align:center;
+  border-radius:10px;
+  background:rgba(255,253,248,.88);
+  border:1px solid rgba(184,154,98,.18);
+  box-shadow:0 22px 55px rgba(76,82,82,.09);
+}
+
+.dedication-card::after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:1px solid rgba(184,154,98,.20);
+  pointer-events:none;
+}
+
+.dedication-card>*{position:relative;z-index:1}
+
+.dedication-card h2{
+  margin:0;
+  font:500 clamp(54px,6.5vw,88px)/.9 "Cormorant Garamond",serif;
+}
+
+.dedication-card p:not(.kicker):not(.question):not(.signature){
+  max-width:620px;
+  margin:18px auto;
+  font:400 22px/1.58 "Cormorant Garamond",serif;
+  color:#65757d;
+}
+
+.question{
+  margin:28px 0 0;
+  font:400 46px "Great Vibes",cursive;
+  color:#779bad;
+}
+
+.signature{
+  margin:16px 0 0;
+  font-size:9px;
+  letter-spacing:.18em;
+}
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.details-page{
+  background:linear-gradient(135deg,#f1f6f1,#f4f7f8);
+}
+
+.details-content{
+  position:relative;
+  z-index:3;
+  width:min(1000px,100%);
+  display:grid;
+  grid-template-columns:1fr .85fr;
+  gap:8vw;
+  align-items:center;
+}
+
+.details-text h2{
+  margin:0 0 28px;
+  font:500 clamp(54px,6vw,82px)/.95 "Cormorant Garamond",serif;
+}
+
+.event{
+  padding:20px 0;
+  border-top:1px solid var(--line);
+}
+
+.event-label{
+  font-size:8px;
+  letter-spacing:.2em;
+  color:#77909a;
+}
+
+.event h3{
+  margin:8px 0 6px;
+  font:500 30px/1.1 "Cormorant Garamond",serif;
+}
+
+.event p{
+  margin:0;
+  font-size:14px;
+  color:#71818a;
+}
+
+.ring-photo{
+  margin:0;
+  padding:12px 12px 34px;
+  border-radius:8px;
+  background:#fffdfa;
+  box-shadow:0 20px 48px rgba(76,89,97,.12);
+}
+
+.ring-photo img{border-radius:4px}
+
+/* =========================================================
+   COUPLE
+========================================================= */
+
+.couple-page{
+  grid-template-columns:minmax(280px,.9fr) minmax(280px,.8fr);
+  gap:8vw;
+  background:
+    radial-gradient(circle at 8% 14%,rgba(216,207,226,.36),transparent 24%),
+    radial-gradient(circle at 92% 16%,rgba(235,215,219,.44),transparent 25%),
+    linear-gradient(135deg,#f3f7f8,#faf8f5);
+}
+
+.couple-flower{
+  width:250px;height:250px;right:-85px;bottom:-90px;
+  background-image:url("images/florals/hydrangea-blue.jpg");
+}
+
+.couple-photo{
+  position:relative;
+  z-index:3;
+  width:min(480px,100%);
+  margin:0;
+  padding:12px 12px 34px;
+  border-radius:8px;
+  background:#fffdfa;
+  box-shadow:0 20px 50px rgba(75,92,101,.13);
+}
+
+.couple-photo img{border-radius:4px}
+
+.couple-copy{
+  position:relative;
+  z-index:3;
+}
+
+.couple-copy h2{
+  margin:0;
+  font:500 clamp(55px,6.5vw,90px)/.9 "Cormorant Garamond",serif;
+}
+
+.couple-copy p:last-child{
+  max-width:390px;
+  font:400 22px/1.55 "Cormorant Garamond",serif;
+  color:#5f7079;
+}
+
+/* =========================================================
+   FINAL PAGE
+========================================================= */
+
+.final-page{
+  min-height:75svh;
+  padding:70px 8vw;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  align-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 12% 16%,rgba(190,214,224,.42),transparent 24%),
+    radial-gradient(circle at 88% 16%,rgba(235,215,219,.45),transparent 25%),
+    radial-gradient(circle at 82% 86%,rgba(205,222,204,.45),transparent 25%),
+    linear-gradient(145deg,#fffdf8,#faf8f3);
+}
+
+.final-page h2{
+  position:relative;
+  z-index:3;
+  margin:0;
+  font:400 clamp(78px,10vw,140px)/.9 "Great Vibes",cursive;
+  color:#50616b;
+}
+
+.final-page h2 span{color:#c88e9d;font-size:.65em}
+
+.final-page .kicker,
+.final-date{
+  position:relative;
+  z-index:3;
+}
+
+.final-date{
+  margin:22px 0 0;
+  font-size:10px;
+  letter-spacing:.22em;
+  color:#6c8795;
+}
+
+.final-left{
+  width:245px;height:245px;left:-85px;bottom:-85px;
+  background-image:url("images/florals/hydrangea-blue.jpg");
+}
+
+.final-right{
+  width:220px;height:220px;right:-75px;top:-70px;
+  background-image:url("images/florals/hydrangea-blush.jpg");
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:850px){
+  .hero{
+    grid-template-columns:1fr;
+    padding:7vh 24px 5vh;
+    gap:10px;
+    text-align:center;
+  }
+
+  .hero-copy{margin:auto}
+  .intro-text{margin-left:auto;margin-right:auto}
+
+  .details-content,
+  .couple-page{
+    grid-template-columns:1fr;
+  }
+
+  .details-text,
+  .couple-copy{text-align:center}
+
+  .ring-photo,
+  .couple-photo{margin-left:auto;margin-right:auto}
+
+  .couple-copy p:last-child{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* =========================================================
+   MOBILE — FIRST PAGE SCALES BY HEIGHT
+========================================================= */
+
+@media (max-width:560px){
+
+  .hero{
+    min-height:100svh;
+    padding:48px 18px 28px;
+    gap:8px;
+    align-content:center;
+  }
+
+  .hero h1{
+    font-size:clamp(46px,14vw,55px);
+  }
+
+  .intro-text{
+    max-width:330px;
+    margin-top:14px;
+    font-size:18px;
+    line-height:1.42;
+  }
+
+  .invitation-area{
+    height:clamp(285px,47svh,340px);
+  }
+
+  .invitation-button{
+    width:min(100%,360px);
+    height:100%;
+  }
+
+  .invitation-paper{
+    width:84%;
+    left:8%;
+    bottom:58px;
+    height:190px;
+    padding:20px;
+  }
+
+  .invitation-paper h2{font-size:41px}
+  .paper-overline{margin-bottom:9px}
+  .paper-divider{margin:9px 0 7px}
+  .invitation-paper small{font-size:6px}
+
+  .envelope-pocket{
+    height:160px;
+    bottom:27px;
+    border-radius:4px 4px 15px 15px;
+  }
+
+  .envelope-pocket::after{
+    width:205px;
+    height:130px;
+    bottom:-58px;
+  }
+
+  .seal{
+    width:50px;
+    height:50px;
+    border-width:4px;
+    font-size:13px;
+  }
+
+  .paper-floral{
+    width:90px;
+    height:90px;
+  }
+
+  /* Smaller, elegant floral accents */
+  .hero-flower-left,
+  .opening-flower-left,
+  .dedication-left,
+  .final-left{
+    width:155px;
+    height:155px;
+    left:-52px;
+    bottom:-52px;
+  }
+
+  .hero-flower-right,
+  .opening-flower-right,
+  .dedication-right,
+  .final-right{
+    width:145px;
+    height:145px;
+    right:-50px;
+    top:-50px;
+  }
+
+  .couple-flower{
+    width:165px;
+    height:165px;
+    right:-58px;
+    bottom:-58px;
+  }
+
+  .page{
+    min-height:92svh;
+    padding:70px 22px;
+  }
+
+  .display-name{
+    font-size:clamp(52px,15vw,62px);
+  }
+
+  .body-copy{
+    font-size:20px;
+    line-height:1.5;
+  }
+
+  .dedication-card{
+    padding:58px 24px;
+    border-radius:7px;
+  }
+
+  .dedication-card::after{inset:9px}
+
+  .dedication-card h2{font-size:52px}
+
+  .dedication-card p:not(.kicker):not(.question):not(.signature){
+    font-size:19px;
+    line-height:1.5;
+  }
+
+  .question{font-size:40px}
+
+  .details-text h2{font-size:54px}
+  .event{padding:17px 0}
+  .event h3{font-size:26px}
+  .event p{font-size:13px}
+
+  .couple-page{gap:45px}
+
+  .couple-photo{
+    padding:10px 10px 28px;
+  }
+
+  .couple-copy h2{font-size:55px}
+
+  .couple-copy p:last-child{
+    font-size:19px;
+    line-height:1.5;
+  }
+
+  .final-page{
+    min-height:70svh;
+    padding:60px 20px;
+  }
+
+  .final-page h2{
+    font-size:clamp(68px,20vw,90px);
+  }
+
+  .final-date{font-size:9px}
+}
+
+/* Extra-small / short screens */
+@media (max-width:560px) and (max-height:700px){
+
+  .hero{
+    padding-top:28px;
+    padding-bottom:18px;
+    gap:2px;
+  }
+
+  .hero h1{font-size:46px}
+
+  .intro-text{
+    margin-top:8px;
+    font-size:17px;
+    line-height:1.35;
+  }
+
+  .invitation-area{height:275px}
+
+  .invitation-paper{
+    height:170px;
+    bottom:50px;
+  }
+
+  .invitation-paper h2{font-size:37px}
+  .envelope-pocket{height:145px}
+
+  .hero-flower-left{
+    width:130px;
+    height:130px;
+    left:-45px;
+    bottom:-45px;
+  }
+
+  .hero-flower-right{
+    width:120px;
+    height:120px;
+    right:-42px;
+    top:-42px;
+  }
+}
