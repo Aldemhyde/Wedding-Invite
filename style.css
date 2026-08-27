@@ -85,8 +85,8 @@ button{font:inherit}
 .paper-divider b{font-size:13px}
 .invitation-paper small{position:relative;z-index:2;font-size:7px;letter-spacing:.14em;color:#7f8f98}
 .paper-floral{position:absolute;width:145px;height:145px;background-size:cover;background-position:center;opacity:.6;filter:saturate(1.1);z-index:1}
-.pf-left{left:-45px;top:-40px;background-image:url("images/florals/hydrangea-blue.jpg");-webkit-mask-image:radial-gradient(circle,#000 45%,transparent 72%);mask-image:radial-gradient(circle,#000 45%,t[...]
-.pf-right{right:-42px;bottom:-45px;background-image:url("images/florals/hydrangea-blush.jpg");-webkit-mask-image:radial-gradient(circle,#000 45%,transparent 72%);mask-image:radial-gradient(circle,#000[...]}
+.pf-left{left:-45px;top:-40px;background-image:url("images/florals/hydrangea-blue.jpg");-webkit-mask-image:radial-gradient(circle,#000 45%,transparent 72%);mask-image:radial-gradient(circle,#000 4[...] 
+.pf-right{right:-42px;bottom:-45px;background-image:url("images/florals/hydrangea-blush.jpg");-webkit-mask-image:radial-gradient(circle,#000 45%,transparent 72%);mask-image:radial-gradient(circle,[...]
 
 .envelope-pocket{
   position:absolute;z-index:2;left:0;right:0;bottom:30px;height:212px;border-radius:38px;overflow:hidden;
@@ -455,3 +455,87 @@ button{font:inherit}
 .invitation-paper h2{ font-size: clamp(30px, 7.5vw, 58px); }
 .invitation-paper small{ font-size: clamp(6px, 1.6vw, 9px); }
 .tap-text{ font-size: clamp(8px, 1.6vw, 11px); }
+
+
+/* Restore visual design while keeping responsive proportions */
+
+/* responsive open/close offsets: percentage-based so they scale with .invitation-button */
+:root{
+  --inv-open-y: -36%;     /* default open translation for paper (desktop-ish) */
+  --envelope-open-y: 12%; /* default envelope pocket open translation */
+}
+
+/* Apply the variables (pixel fallback provided by var second param) */
+.invitation-button.open .invitation-paper {
+  transform: translateY(var(--inv-open-y, -132px)) rotate(-1deg);
+}
+.invitation-button.open .envelope-pocket {
+  transform: translateY(var(--envelope-open-y, 58px));
+}
+
+/* smaller screens: slightly smaller open offsets */
+@media (max-width: 560px) {
+  :root{
+    --inv-open-y: -28%;
+    --envelope-open-y: 9%;
+  }
+}
+
+/* Make corner ::after florals position scale with viewport so they stay visible */
+.hero::after{ right:8%; bottom: clamp(-180px, -12vh, -120px); transform:rotate(-10deg); }
+.invitation-page::after{ left:8%; top: clamp(-180px, -12vh, -120px); transform:rotate(8deg); }
+.dedication-page::after{ right:7%; bottom: clamp(-180px, -12vh, -120px); }
+.details-page::after{ left: clamp(-140px, -8vw, -90px); top: 20%; }
+.couple-page::after{ right:5%; top: clamp(-180px, -12vh, -120px); }
+.final-page::after{ left:8%; top: clamp(-180px, -12vh, -120px); }
+
+/* Ensure the florals remain slightly behind content but fully visible */
+.floral-cloud,
+.hero-flower-left,
+.hero-flower-right,
+.opening-flower-left,
+.opening-flower-right,
+.dedication-left,
+.dedication-right,
+.couple-flower,
+.final-left,
+.final-right {
+  opacity: 1 !important;
+  filter: saturate(1.28) brightness(1.06) contrast(1.02) !important;
+  z-index: 1 !important;
+}
+
+/* Content should stay above florals (reinforced) */
+.hero-copy, .invitation-area, .page-content, .dedication-card,
+.details-content, .couple-photo, .couple-copy, .final-page h2,
+.final-page .kicker, .final-date {
+  z-index: 3 !important;
+}
+
+/* Re-affirm palette/color accents in case some rules were suppressed */
+:root {
+  --accent-ink: #4d6270;
+  --accent-gold: #c7a05f;
+  --accent-blue: #6fa9c8;
+  --accent-pink: #e49ab4;
+}
+.paper-divider b, .divider { color: var(--accent-gold); }
+.hero .kicker { color: #6f93a8; }
+.invitation-page .kicker { color: #9a7fa7; }
+.dedication-page .kicker { color: #73977b; }
+.details-page .kicker { color: #7199b0; }
+.couple-page .kicker { color: #9c7390; }
+.final-page .kicker { color: #8a82a8; }
+
+/* Optional: keep the floral corner images slightly smaller on narrow phones */
+@media (max-width: 420px) {
+  .hero::after,
+  .invitation-page::after,
+  .dedication-page::after,
+  .details-page::after,
+  .couple-page::after,
+  .final-page::after {
+    width: clamp(120px, 32vw, 210px);
+    height: clamp(120px, 32vw, 210px);
+  }
+}
